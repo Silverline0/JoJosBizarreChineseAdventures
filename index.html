@@ -85,12 +85,64 @@ p{margin:0 0 6px}
   body{background:#fff}
 }
 @media (max-width:768px){
-  .page{max-width:100%;min-height:auto;padding:14px;margin:0 0 8px}
-  .blocks{grid-template-columns:1fr}
-  .cover h1{font-size:36px}
-  .cover .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .day-head{flex-direction:column}
-  .day-head .stats{text-align:left;margin-top:4px}
+  html,body{font-size:15.5px;line-height:1.55}
+  .page{max-width:100%;min-height:auto;padding:14px 12px;margin:0 0 6px;box-shadow:none}
+  .blocks{grid-template-columns:1fr;gap:10px}
+  .block{padding:11px 13px;font-size:13.5px;line-height:1.5}
+  .block img{height:160px}
+  .block .what{font-size:14.5px;font-weight:700;margin:6px 0 4px;line-height:1.3}
+  .block table{font-size:12.5px}
+  .block table td{padding:3px 4px 3px 0;line-height:1.45}
+  .block .time{font-size:12px;padding:2px 8px;letter-spacing:.6px}
+  .note{font-size:12.5px;padding:7px 9px;line-height:1.5;margin-top:6px}
+  .phrase{font-size:13px;padding:7px 9px;line-height:1.6;margin-top:6px;display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+  .audio-btn{
+    padding:8px 12px !important;font-size:20px;
+    min-width:44px;min-height:44px;
+    background:var(--soft);border-radius:8px;
+    margin-left:auto;border:1px solid var(--rule);
+  }
+  .audio-btn:active{background:var(--accent);color:white;transform:scale(.94)}
+  .cover h1{font-size:34px;line-height:1.1}
+  .cover .subtitle{font-size:14px;line-height:1.4}
+  .cover .dates{font-size:22px;margin:20px 0}
+  .cover .stats-grid{grid-template-columns:repeat(2,1fr);max-width:340px;gap:10px}
+  .cover .stat{padding:11px 6px}
+  .cover .stat .num{font-size:26px}
+  .cover .stat .lbl{font-size:9.5px}
+  .legend{font-size:10.5px;gap:8px}
+  .day-head{flex-direction:column;padding-bottom:6px;margin-bottom:8px}
+  .day-head .date{font-size:11.5px;letter-spacing:1.5px}
+  .day-head .place{font-size:21px;margin:3px 0;line-height:1.15}
+  .day-head .stats{text-align:left;margin-top:5px;font-size:11.5px}
+  .day-head .stats span{display:inline;margin-right:8px}
+  .minimap{margin:8px 0 10px;height:32px;padding:0 10px}
+  .appendix h2{font-size:22px;margin-bottom:10px;line-height:1.2}
+  .appendix h3{font-size:14.5px;margin-top:14px}
+  .appendix table.full{font-size:11.5px;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--rule);border-radius:4px}
+  .appendix table.full th,.appendix table.full td{padding:6px 6px;white-space:normal;min-width:120px;vertical-align:top}
+  .appendix table.full th{position:sticky;top:0;background:var(--soft);z-index:1}
+  .appendix ul{margin-left:18px;font-size:13px;line-height:1.5}
+  .appendix ul li{margin-bottom:5px}
+  .appendix .grid2{grid-template-columns:1fr}
+  .checklist label{font-size:13px;padding:5px 0;line-height:1.45}
+  .checklist input{margin-right:8px;transform:scale(1.2)}
+  .controls{top:8px;right:8px;gap:4px}
+  .controls button{padding:6px 9px;font-size:11px}
+  a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+  .block table a, .appendix a{display:inline-block;padding:1px 0}
+}
+@media (max-width:480px){
+  html,body{font-size:15px}
+  .page{padding:12px 10px}
+  .block{padding:10px 11px;font-size:13px}
+  .block img{height:140px}
+  .block .what{font-size:14px}
+  .cover h1{font-size:28px}
+  .cover .dates{font-size:20px}
+  .day-head .place{font-size:19px}
+  .appendix h2{font-size:19px}
+  .audio-btn{padding:8px 10px !important;min-width:42px;min-height:42px}
 }
 .audio-btn{background:none;border:none;cursor:pointer;padding:0 4px;font-size:inherit;color:var(--accent);transition:transform .1s;font-family:inherit;line-height:1}.audio-btn:hover{transform:scale(1.2)}.audio-btn:active{transform:scale(.95)}
 </style>
@@ -150,7 +202,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">🕌 Jumu'ah at home mosque + eSIM prep</div>
 <table><tr><td>Jumu'ah</td><td>Home/local Riyadh mosque — khutbah ~12:00, prayer ~12:30 RUH local. The trip's first Friday — pray BEFORE departing for airport.</td></tr><tr><td>eSIM</td><td>Install Airalo or Nomad eSIM × 3 (~12 USD each), China + HK plan. Don't activate until landing in CAN.</td></tr><tr><td>Light meal</td><td>Eat at home after prayer — Saudia onboard meal is later</td></tr></table>
 <div class="note">Next Jumu'ah is Jun 19 at <a href="https://en.wikipedia.org/wiki/Lijiang" target="_blank" rel="noopener">Lijiang Great Mosque</a>. On Fri Jun 26 you'll be at HK Disneyland — pray Dhuhr (4 rakat) at the park's Quiet Room as a traveler (musafir), or sacrifice ~3h of park time to attend congregational Jumu'ah at <a href="https://www.iuhk.org/about/kowloon-masjid/" target="_blank" rel="noopener">Kowloon Mosque</a>. Du'a for safe travel (سفر) before leaving: <em>"Subhanalladhi sakhkhara lana hadha wa ma kunna lahu muqrinin."</em></div>
-<div class="phrase zh">你好 — Nǐ hǎo — "Hello" <button onclick="playZh('你好')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">你好 — Nǐ hǎo — "Hello" <button onclick="playAudio('audio/000.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">14:00 – 18:00</span><div class="what">Transfer to King Khalid Intl (RUH)</div>
@@ -181,7 +233,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_Baiyun_International_Airport_Terminal_2_201807.jpg?width=800" alt="Guangzhou Baiyun T2 interior">
 <table><tr><td>Arrive</td><td>~09:30 CAN T2 from SV876</td></tr><tr><td>Customs</td><td>Show Digital Arrival Card QR (do online +24h ahead)</td></tr><tr><td>Taxi</td><td>To Guangzhou South 广州南 ~50 min, ~150 CNY</td></tr></table>
 <div class="note">Skip the metro with luggage — direct taxi is cleaner. Didi works fine; English version of the app called "Didi for foreigners".</div>
-<div class="phrase zh">广州南站,谢谢 — Guǎngzhōu Nán Zhàn, xièxie — "Guangzhou South station, thanks" <button onclick="playZh('广州南站谢谢')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">广州南站,谢谢 — Guǎngzhōu Nán Zhàn, xièxie — "Guangzhou South station, thanks" <button onclick="playAudio('audio/001.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">HSR Guangzhou South → Yangshuo Station</div>
@@ -194,13 +246,13 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/1_aerial_yangshuo_panorama_2017.jpg?width=800" alt="Yangshuo karst skyline">
 <table><tr><td>Hotel</td><td><a href="https://www.yangshuomountainretreat.com/" target="_blank" rel="noopener">Yangshuo Mountain Retreat</a> / <a href="https://www.hyatt.com/en-US/hotel/china/alila-yangshuo/yshrr" target="_blank" rel="noopener">Alila Yangshuo</a> <span class="verify">VERIFY rate, triple</span></td></tr><tr><td>Address</td><td>阳朔县 West Street 西街 area</td></tr><tr><td>Walk</td><td>West Street 西街 — 1.5 km loop</td></tr></table>
 <div class="note">First afternoon should be light — you'll be jet-lagged. Walk West Street, scout the rice-noodle 米粉 shops. Skip aggressive vendors.</div>
-<div class="phrase zh">不要,谢谢 — Bú yào, xièxie — "No thanks" (firm refusal to touts) <button onclick="playZh('不要谢谢')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">不要,谢谢 — Bú yào, xièxie — "No thanks" (firm refusal to touts) <button onclick="playAudio('audio/002.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">18:00 – 22:00</span><div class="what">First Guangxi dinner — halal Muslim noodle shop 清真</div>
 <table><tr><td>Where</td><td>Muslim Noodle Shop directly opposite Yangshuo bus station entrance (Gansu Hui Muslim owners)</td></tr><tr><td>Order</td><td>Hand-pulled noodles 兰州拉面 + beef + sides — halal certified</td></tr><tr><td>Cost</td><td>~¥120 / 3 incl. drinks</td></tr><tr><td>Backup</td><td>Any 清真 Lanzhou Lamian 兰州拉面 chain in town — all Hui-Muslim run, fully halal</td></tr></table>
 <div class="note">Yangshuo's halal options are limited; this Gansu-province Muslim family restaurant is the proven anchor. Beer fish (Yangshuo's signature dish) is haram — uses Liquan beer in the broth. Local Guilin mifen 桂林米粉 noodles also often contain pork stock — ask carefully or stick to 清真 places.</div>
-<div class="phrase zh">这个是清真的吗? — Zhège shì qīngzhēn de ma? — "Is this halal?" <button onclick="playZh('这个是清真的吗')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">这个是清真的吗? — Zhège shì qīngzhēn de ma? — "Is this halal?" <button onclick="playAudio('audio/003.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 </div>
 </section>
@@ -221,7 +273,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Li_River_and_mountains_in_Yangshuo_County,_Guilin52.jpg?width=800" alt="Li River bamboo raft karst">
 <table><tr><td>Route</td><td>Yangdi pier 杨堤 → Xingping pier 兴坪 (~1.5h)</td></tr><tr><td>Cost</td><td>¥216 / pax × 3 = ¥648 + driver to pier ~¥150</td></tr><tr><td>Hours</td><td>Rafts run 08:30–16:00, peak 09:30</td></tr><tr><td>Book</td><td>Hotel desk / Trip.com 24h advance</td></tr></table>
 <div class="note">This is the iconic ¥20 RMB note backdrop. Sun in eyes 08–10 — wear a hat, polarised sunglasses, dry-bag for phones. Lifejacket mandatory.</div>
-<div class="phrase zh">竹筏 — Zhúfá — "Bamboo raft" <button onclick="playZh('竹筏')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">竹筏 — Zhúfá — "Bamboo raft" <button onclick="playAudio('audio/004.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Xingping old town + return + lunch</div>
@@ -234,14 +286,14 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/1_aerial_yangshuo_panorama_2017.jpg?width=800" alt="Yulong river karst valley">
 <table><tr><td>Where</td><td><a href="https://www.chinadiscovery.com/guilin-tours/yangshuo-bamboo-rafting.html" target="_blank" rel="noopener">Yulong River</a> valley west of town</td></tr><tr><td>Bike</td><td>E-bike rental ¥60/day × 3 = ¥180</td></tr><tr><td>Route</td><td>Yangshuo → Yulong Bridge 遇龙桥 → Dragon Bridge 旧县 (~18 km loop)</td></tr></table>
 <div class="note">Lighter rafting also offered on Yulong (¥150/raft for 2 people, ~1h). E-bike is more flexible — stop for fields, water buffalo, banyans. Avoid mid-afternoon thunderstorms (PM).</div>
-<div class="phrase zh">租电动车 — Zū diàndòngchē — "Rent an e-bike" <button onclick="playZh('租电动车')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">租电动车 — Zū diàndòngchē — "Rent an e-bike" <button onclick="playAudio('audio/005.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">18:00 – 22:00</span><div class="what">Xianggong Mountain 相公山 sunset</div>
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/China_-_Yangshuo_14_-_karst_peaks_tower_over_the_paddy_fields_(140904310).jpg?width=800" alt="Xianggong Mountain Li River bend">
 <table><tr><td>Where</td><td>Xianggong Mountain 相公山, ~45 min drive N of town</td></tr><tr><td>Entry</td><td>¥60 / pax × 3 = ¥180</td></tr><tr><td>Hours</td><td>Open until ~19:30 summer; sunset ~19:45 in June</td></tr><tr><td>Transport</td><td>Hire driver round-trip ~¥250</td></tr></table>
 <div class="note">15-min hike up steps to the platform. Premier sunset spot — Li River S-bend, 360° karst. Pack headlamps for descent. Dinner late back in town.</div>
-<div class="phrase zh">日落几点 — Rìluò jǐ diǎn — "What time is sunset?" <button onclick="playZh('日落几点')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">日落几点 — Rìluò jǐ diǎn — "What time is sunset?" <button onclick="playAudio('audio/006.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 </div>
 </section>
@@ -265,7 +317,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Longji_Rice_Terraces_004.jpg?width=800" alt="Longji rice terraces dragon backbone">
 <table><tr><td>Where</td><td>Longji Rice Terraces 龙脊梯田, Longsheng County</td></tr><tr><td>Driver</td><td>Private car round-trip ~¥900 <span class="verify">VERIFY</span></td></tr><tr><td>Entry</td><td>¥80 / pax × 3 = ¥240 (48h valid)</td></tr></table>
 <div class="note">Option B (10–14): Slow morning at <a href="https://www.chinadiscovery.com/guilin-tours/yangshuo-bamboo-rafting.html" target="_blank" rel="noopener">Yulong River</a> breakfast café. Cooking class option — pick a 清真-friendly studio (skip beer-fish demos); ask for Yunnan-Hui style stir-fry, Lanzhou hand-pulled noodles, or spring rolls. ~¥250/pax. Confirm halal beef/lamb source on booking.</div>
-<div class="phrase zh">梯田 — Tītián — "Terraced fields" <button onclick="playZh('梯田')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">梯田 — Tītián — "Terraced fields" <button onclick="playAudio('audio/007.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Option A: Ping'an village 平安寨 viewpoints</div>
@@ -283,7 +335,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Yangshuo-Impression_Sanjie_Liu-48-2012-gje.jpg?width=800" alt="Liu Sanjie outdoor performance Li River">
 <table><tr><td>Where</td><td>Shutong Hill 书童山 amphitheatre on Li River</td></tr><tr><td>Show</td><td>20:00–21:10 (peak: 2nd show 21:20)</td></tr><tr><td>Tickets</td><td>B2 Superior ¥240 / pax × 3 = ¥720 (recommended)</td></tr><tr><td>Book</td><td><a href="https://www.chinahighlights.com/yangshuo/attraction/impression-liu-sanjie.htm">Chinahighlights / Trip.com</a> 2 days advance</td></tr></table>
 <div class="note">Zhang Yimou's outdoor spectacle with 600+ performers, river as stage. Bring light layer — river breeze. Book covered A-zone if rain forecast >30%.</div>
-<div class="phrase zh">前面的座位 — Qiánmiàn de zuòwèi — "Seats up front" <button onclick="playZh('前面的座位')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">前面的座位 — Qiánmiàn de zuòwèi — "Seats up front" <button onclick="playAudio('audio/008.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 </div>
 </section>
@@ -303,7 +355,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Departures_platform_of_L4_Kunming_South_Railway_Station_(20210322161654).jpg?width=800" alt="Kunming South Station concourse">
 <table><tr><td>Train</td><td>G2934 Yangshuo → Kunming S, ~5h <span class="verify">VERIFY 2026</span></td></tr><tr><td>Depart</td><td>~07:30 Yangshuo (driver hotel→station ~30 min)</td></tr><tr><td>2nd class</td><td>~¥445 / pax × 3 = ¥1,335</td></tr><tr><td>Book</td><td><a href="https://us.trip.com/trains/china/route/yangshuo-to-kunming/">Trip.com</a> 14 days advance</td></tr></table>
 <div class="note">Pack breakfast onboard (station bakery). Train has hot water dispensers; bring instant noodles + tea.</div>
-<div class="phrase zh">几号车厢 — Jǐ hào chēxiāng — "Which carriage number?" <button onclick="playZh('几号车厢')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">几号车厢 — Jǐ hào chēxiāng — "Which carriage number?" <button onclick="playAudio('audio/009.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Onboard + Kunming South transfer (do NOT exit)</div>
@@ -321,7 +373,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Erhai_Lake_Dali_Yunnan.jpg?width=800" alt="Erhai Lake Dali">
 <table><tr><td>Hotel</td><td><a href="https://www.editionhotels.com/dali/" target="_blank" rel="noopener">The Dali EDITION</a> (opens Q1 2026, modern Ian Schrager boutique), Wanfu Rd 万福路, Erhai shore <span class="verify">VERIFY opening + rates</span></td></tr><tr><td>Taxi</td><td>~¥100 Dali Station → hotel (25 min)</td></tr><tr><td>Dinner</td><td>Halal Bai-style dinner — Gudaoji Halal Restaurant 古道鸡清真餐厅 (Dali City) ~¥180/3</td></tr></table>
 <div class="note">Altitude jumps from 110m to 1,900m today. Light dinner, hydrate (3L). <a href="https://www.editionhotels.com/dali/" target="_blank" rel="noopener">The Dali EDITION</a>'s infinity pool faces Erhai — saving for tomorrow's daylight. Sleep early; tomorrow climbs higher.</div>
-<div class="phrase zh">乳扇 — Rǔshàn — "Fan cheese" (Bai specialty, milk pulled into fans) <button onclick="playZh('乳扇')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">乳扇 — Rǔshàn — "Fan cheese" (Bai specialty, milk pulled into fans) <button onclick="playAudio('audio/010.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 </div>
 </section>
@@ -342,7 +394,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dali_-_Cangshan_-_45875286174.jpg?width=800" alt="Cangshan mountains from Dali">
 <table><tr><td>Where</td><td><a href="https://www.travelchinaguide.com/attraction/yunnan/dali/mt_cangshan.htm" target="_blank" rel="noopener">Cangshan Mountain</a> 苍山, west of Dali Old Town</td></tr><tr><td>Drive</td><td>EDITION → Gantong gate ~30 min, ¥80 taxi</td></tr><tr><td>Entry</td><td>Park ¥30 / pax + Gantong cableway ¥80 RT × 3</td></tr></table>
 <div class="note">Choose Gantong 感通 cableway over Ximatan if pressed for time — Ximatan reaches 3,920m (Cangshan summit). Go EARLY; clouds form by 11:00 hiding peaks.</div>
-<div class="phrase zh">索道 — Suǒdào — "Cable car" <button onclick="playZh('索道')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">索道 — Suǒdào — "Cable car" <button onclick="playAudio('audio/011.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Cangshan: Cloudless Pavilion, Jade Belt Path</div>
@@ -355,7 +407,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tree_in_front_of_Erhai_Lake.jpg?width=800" alt="Erhai Lake calm water">
 <table><tr><td>Erhai</td><td>Free access; e-bike loop ¥80/day × 3</td></tr><tr><td>Xizhou</td><td>Yan Family Compound 严家大院 ¥20/pax</td></tr><tr><td>Photo</td><td>Panxi S-Bend 磻溪S湾 — most-Instagrammed spot</td></tr></table>
 <div class="note">Erhai's east shore is quieter; west shore is touristy. The lake protection program restricts cars to dedicated ecological corridor — rent e-bikes inside.</div>
-<div class="phrase zh">洱海 — Ěrhǎi — "Ear Sea" (lake shaped like an ear) <button onclick="playZh('洱海')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">洱海 — Ěrhǎi — "Ear Sea" (lake shaped like an ear) <button onclick="playAudio('audio/012.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">18:00 – 22:00</span><div class="what">Xizhou Bai tie-dye workshop + dinner</div>
@@ -380,7 +432,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="block"><span class="time">06:00 – 10:00</span><div class="what">Slow morning Xizhou + checkout</div>
 <table><tr><td>Where</td><td>Xizhou Sifang Square morning market</td></tr><tr><td>Try</td><td>Xizhou baba 喜洲粑粑 (filled pancake) ¥10</td></tr><tr><td>Pack</td><td>Hotel → Dali Station taxi ~40 min, ¥150</td></tr></table>
 <div class="note"><a href="https://www.editionhotels.com/dali/" target="_blank" rel="noopener">The Dali EDITION</a> will store bags before check-out time. No need to rush; the train at midday is your anchor.</div>
-<div class="phrase zh">喜洲粑粑 — Xǐzhōu bābā — Local stuffed flatbread (sweet rose or savoury) <button onclick="playZh('喜洲粑粑')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">喜洲粑粑 — Xǐzhōu bābā — Local stuffed flatbread (sweet rose or savoury) <button onclick="playAudio('audio/013.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">D-train Dali → Lijiang</div>
@@ -393,7 +445,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lijiang_Yunnan_Old-town-02.jpg?width=800" alt="Lijiang Old Town tiled roofs">
 <table><tr><td>Hotel</td><td><a href="https://all.accor.com/hotel/7231/index.en.shtml" target="_blank" rel="noopener">Pullman Lijiang Resort &amp; Spa</a> 丽江铂尔曼度假酒店 — 358m² Family Villa <span class="verify">VERIFY rate + halal advance order</span></td></tr><tr><td>Location</td><td>At foot of Jade Dragon Snow Mtn, next to Shuhe Ancient Town (8 km from Dayan Old Town)</td></tr><tr><td>Entry</td><td>Lijiang Maintenance Fee ¥80/pax — pay at first Old Town entry; receipt valid 1 week</td></tr><tr><td>Wander</td><td>Sifang Street 四方街, water channels, Wangu Pavilion 万古楼 (taxi to Dayan ~¥40, 15 min)</td></tr></table>
 <div class="note">Pullman is a proper resort with uninterrupted Jade Dragon Snow Mtn views from family villa terraces. Most Old Town activities require a short taxi — budget ~¥80/day in taxis. Carry the Maintenance Fee receipt; it is checked at <a href="https://www.travelchinaguide.com/attraction/yunnan/lijiang/black-dragon-pool.htm" target="_blank" rel="noopener">Black Dragon Pool</a> + Mu Mansion. Naxi-inspired villa architecture with heated floors, soak tub, kid&apos;s room.</div>
-<div class="phrase zh">古城维护费 — Gǔchéng wéihù fèi — "Old Town maintenance fee" <button onclick="playZh('古城维护费')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">古城维护费 — Gǔchéng wéihù fèi — "Old Town maintenance fee" <button onclick="playAudio('audio/014.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">18:00 – 22:00</span><div class="what">Halal Lijiang dinner 清真 + Lion Hill 狮子山 night view</div>
@@ -419,21 +471,21 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lijiang_Yunnan_Black-Dragon-Pool-01.jpg?width=800" alt="Black Dragon Pool with Jade Dragon Snow Mountain">
 <table><tr><td>Where</td><td>Heilongtan Park 黑龙潭公园, N of Old Town</td></tr><tr><td>Entry</td><td>Free with Maintenance Fee receipt (~¥80 already paid)</td></tr><tr><td>Hours</td><td>07:00–19:00; arrive 07:30 for windless reflection</td></tr><tr><td>Walk</td><td>From Old Town: 20-min walk N or e-bike ¥15</td></tr></table>
 <div class="note">The classic shot — Five Phoenix Pavilion 五凤楼 reflecting in the pool with snow-capped Jade Dragon behind. Only reliable in early morning before tour buses (08:30+). Bring polarizer if you have one.</div>
-<div class="phrase zh">玉龙雪山 — Yùlóng Xuěshān — "Jade Dragon Snow Mountain" <button onclick="playZh('玉龙雪山')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">玉龙雪山 — Yùlóng Xuěshān — "Jade Dragon Snow Mountain" <button onclick="playAudio('audio/015.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Baisha 白沙 + return for Jumu'ah 主麻 prayer</div>
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Naxi_Village_near_Lijiang_-_panoramio.jpg?width=800" alt="Baisha village Naxi murals">
 <table><tr><td>Baisha</td><td>Quick 90-min visit (10:00–11:30): Dabaoji Palace 大宝积宫 murals ¥30/pax, Dr. Ho's Clinic</td></tr><tr><td>Drive back</td><td>Taxi ~¥80 one-way, 25 min — leave Baisha by 11:45</td></tr><tr><td>🕌 Jumu'ah</td><td><a href="https://en.wikipedia.org/wiki/Lijiang" target="_blank" rel="noopener">Lijiang Great Mosque</a> 丽江清真寺 (inside Old Town) — Friday prayer ~13:00 <span class="verify">VERIFY exact time + address</span></td></tr><tr><td>Lunch</td><td>Light halal meal at Lijiang Mosque area or skip Naxi noodles (pork stock common)</td></tr></table>
 <div class="note">Lijiang's only mosque is in the ancient town. Khutbah usually starts 12:45, prayer 13:15 — confirm Thursday with hotel concierge. Bring prayer cap; wudu facilities on-site. After Jumu'ah, halal Naxi-style lunch at nearby 清真 stall ~¥60/3.</div>
-<div class="phrase zh">清真寺在哪里? — Qīngzhēn sì zài nǎlǐ? — "Where is the mosque?" <button onclick="playZh('清真寺在哪里')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">清真寺在哪里? — Qīngzhēn sì zài nǎlǐ? — "Where is the mosque?" <button onclick="playAudio('audio/016.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">14:00 – 18:00</span><div class="what"><a href="https://www.trip.com/travel-guide/attraction/lijiang/mu-fu-mansion-78639/" target="_blank" rel="noopener">Mu Family Mansion</a> 木府 (Naxi "Forbidden City")</div>
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/The_view_on_the_mountain_of_Mu_Fu,_Lijiang,_Yunnan.jpg?width=800" alt="Mu Family Mansion architecture">
 <table><tr><td>Where</td><td>木府 inside Lijiang Old Town SW corner</td></tr><tr><td>Entry</td><td>¥45 / pax × 3 = ¥135 <span class="verify">VERIFY</span></td></tr><tr><td>Hours</td><td>08:30–17:30</td></tr><tr><td>Audio guide</td><td>+¥20, worth it</td></tr></table>
 <div class="note">Mu was the Naxi chieftain clan; the mansion is Ming-era restored after 1996 earthquake. Climb up Mt. Lion 狮子山 behind for free panoramic view.</div>
-<div class="phrase zh">木府 — Mù fǔ — "<a href="https://www.trip.com/travel-guide/attraction/lijiang/mu-fu-mansion-78639/" target="_blank" rel="noopener">Mu Family Mansion</a>" <button onclick="playZh('木府')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">木府 — Mù fǔ — "<a href="https://www.trip.com/travel-guide/attraction/lijiang/mu-fu-mansion-78639/" target="_blank" rel="noopener">Mu Family Mansion</a>" <button onclick="playAudio('audio/017.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">18:00 – 22:00</span><div class="what">Free evening / Naxi music optional</div>
@@ -459,7 +511,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="block"><span class="time">06:00 – 10:00</span><div class="what">Early breakfast + private driver pickup</div>
 <table><tr><td>Driver</td><td>Pre-booked private car/SUV Lijiang→Shangri-La via TLG, ~¥1,300 <span class="verify">VERIFY rate</span></td></tr><tr><td>Pickup</td><td>07:30 Pullman Lijiang Resort</td></tr><tr><td>Drive</td><td>Lijiang → TLG Upper ~2h, scenic Jinsha River 金沙江</td></tr><tr><td>Pack</td><td>Warm layer, hiking shoes, AMS meds, water 1.5L/pax</td></tr></table>
 <div class="note">Driver provides oxygen pillows on request. Take Diamox if prescribed (start tonight for prophylaxis). Do NOT drink alcohol today or tomorrow.</div>
-<div class="phrase zh">高原反应 — Gāoyuán fǎnyìng — "Altitude sickness" <button onclick="playZh('高原反应')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">高原反应 — Gāoyuán fǎnyìng — "Altitude sickness" <button onclick="playAudio('audio/018.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what"><a href="https://www.chinahighlights.com/lijiang/attraction/tiger-leaping-gorge.htm" target="_blank" rel="noopener">Tiger Leaping Gorge</a> 虎跳峡 — Upper Viewing Platform</div>
@@ -471,7 +523,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="block"><span class="time">14:00 – 18:00</span><div class="what">Lunch riverside + drive up to Shangri-La</div>
 <table><tr><td>Lunch</td><td>Local Tibetan-Han at Qiaotou 桥头 ¥250/3</td></tr><tr><td>Drive</td><td>TLG → Shangri-La ~2.5h via Xiagei 下给</td></tr><tr><td>Climb</td><td>~1,800m → 3,300m over 2h (gradual switchbacks)</td></tr><tr><td>Check-in</td><td><a href="https://www.hilton.com/en/locations/china/shangri-la-yunnan/" target="_blank" rel="noopener">Hilton Garden Inn Shangri-La</a> <span class="verify">VERIFY family triple</span></td></tr></table>
 <div class="note">First altitude impact hits ~3,000m — headache, light dizziness normal. Stay hydrated. Hilton Garden Inn lobby has tea service; ask for Tibetan butter tea 酥油茶 — fat helps altitude adaptation.</div>
-<div class="phrase zh">酥油茶 — Sūyóu chá — "Butter tea" (Tibetan staple) <button onclick="playZh('酥油茶')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">酥油茶 — Sūyóu chá — "Butter tea" (Tibetan staple) <button onclick="playAudio('audio/019.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">18:00 – 22:00</span><div class="what">Slow evening Dukezong 独克宗 + early bed</div>
@@ -497,14 +549,14 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="block"><span class="time">06:00 – 10:00</span><div class="what">Slow start + altitude check, breakfast</div>
 <table><tr><td>Sleep in</td><td>09:00 latest — first night at 3,300m</td></tr><tr><td>Breakfast</td><td>Tibetan yak butter tea + tsampa at hotel</td></tr><tr><td>Vitals</td><td>Hotel front desk has pulse oximeter; check SpO₂ &gt;88% before going out</td></tr></table>
 <div class="note">If anyone has severe headache, vomiting, ataxia — DESCEND. Do not push the program. Hilton Garden Inn front desk can arrange rapid descent transport to Lijiang if needed (1.5h drive, lower altitude). Drink 4L water today.</div>
-<div class="phrase zh">头疼 — Tóuténg — "Headache" <button onclick="playZh('头疼')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">头疼 — Tóuténg — "Headache" <button onclick="playAudio('audio/020.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what"><a href="https://www.trip.com/travel-guide/attraction/shangri-la/shika-snow-mountain-65556/" target="_blank" rel="noopener">Shika Snow Mountain</a> 石卡雪山 cable car</div>
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shika_Snow_Mountain_Yunnan.jpg?width=800" alt="Shika Snow Mountain summit panorama">
 <table><tr><td>Where</td><td><a href="https://www.trip.com/travel-guide/attraction/shangri-la/shika-snow-mountain-65556/" target="_blank" rel="noopener">Shika Snow Mountain</a> 石卡雪山, 7 km SW of Dukezong, summit 4,449m</td></tr><tr><td>Entry</td><td>¥220 entry + ¥75 cable car = ¥295 / pax × 3 = ¥885 <span class="verify">VERIFY 2026 rate</span></td></tr><tr><td>Hours</td><td>08:30–17:00 (cable car last up 15:30)</td></tr><tr><td>Taxi</td><td>Hotel → entrance ~¥50 each way (20 min)</td></tr></table>
 <div class="note">Two-stage cable car climbs from 3,200m to 4,449m — one of Yunnan&apos;s highest. Top platform offers Tibetan plateau panorama; on a clear day, Meili Snow Mountain 13-peaks visible 200 km west. June grass-flowering covers lower slopes in rhododendrons + primroses. Stay at summit 30 min max — wind chill is real, oxygen thinner. Lunch back in Dukezong at halal Muslim Plateau Yak Beef Restaurant.</div>
-<div class="phrase zh">石卡雪山 — Shíkǎ Xuěshān — "<a href="https://www.trip.com/travel-guide/attraction/shangri-la/shika-snow-mountain-65556/" target="_blank" rel="noopener">Shika Snow Mountain</a>" <button onclick="playZh('石卡雪山')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">石卡雪山 — Shíkǎ Xuěshān — "<a href="https://www.trip.com/travel-guide/attraction/shangri-la/shika-snow-mountain-65556/" target="_blank" rel="noopener">Shika Snow Mountain</a>" <button onclick="playAudio('audio/021.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">14:00 – 18:00</span><div class="what">Dukezong Old Town 独克宗 PM walk</div>
@@ -538,7 +590,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Potatso_(Pudacuo)_National_Park,_Diqing_-_panoramio.jpg?width=800" alt="Pudacuo National Park alpine forest">
 <table><tr><td>Where</td><td>Pudacuo 普达措 — Yunnan's first national park, ~25 km E of Shangri-La</td></tr><tr><td>Drive</td><td>Hotel → gate ~45 min, taxi/private car ¥250 RT</td></tr><tr><td>Entry</td><td>¥138 entrance + ¥120 shuttle = ¥258 / pax × 3 = ¥774</td></tr><tr><td>Hours</td><td>08:30–16:00 (last admission 15:30)</td></tr></table>
 <div class="note">Booking online recommended (peak-day cap on entries). Park shuttle is mandatory — drops at 3 stops. Arrive at gate 08:00; you want maximum daylight at this altitude.</div>
-<div class="phrase zh">国家公园 — Guójiā gōngyuán — "National park" <button onclick="playZh('国家公园')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">国家公园 — Guójiā gōngyuán — "National park" <button onclick="playAudio('audio/022.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Shudu Lake 属都湖 walk (3.3 km plank)</div>
@@ -585,7 +637,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buddha_Shakyamuni_as_Lord_of_the_Munis.jpg?width=800" alt="Thangka painting Tibetan Buddhist art">
 <table><tr><td>Market</td><td>Jincheng St 金城街, morning vendors of Tibetan spices, beads, knives (no purchase)</td></tr><tr><td>Thangka studio</td><td>Visit a master painter; ~¥150 for 1h talk + tea</td></tr><tr><td>Option B</td><td>Meili viewpoint at Feilai Si 飞来寺, 13 peaks at 6,740m</td></tr></table>
 <div class="note">Thangka are sacred Buddhist scroll paintings — a single piece takes months. Negotiating prices is OK but be respectful — they are religious objects, not just art.</div>
-<div class="phrase zh">唐卡 — Tángkǎ — "Thangka" <button onclick="playZh('唐卡')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">唐卡 — Tángkǎ — "Thangka" <button onclick="playAudio('audio/023.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">14:00 – 18:00</span><div class="what">Option A: Napa Lake 纳帕海 grasslands</div>
@@ -620,7 +672,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Lunch + bag store + flight prep</div>
 <table><tr><td>Lunch</td><td>Tibetan noodles 藏面 + yak dumplings ¥220/3</td></tr><tr><td>Storage</td><td>Hotel after checkout (free)</td></tr><tr><td>Confirm</td><td>MU5773 status on Trip.com or China Eastern app</td></tr></table>
 <div class="note">DIG → CAN flight is MU5773 evening departure <span class="verify">VERIFY exact 21:30 dep</span>. Monsoon weather can shift schedules in Yunnan — confirm at 12:00.</div>
-<div class="phrase zh">航班 — Hángbān — "Flight" <button onclick="playZh('航班')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">航班 — Hángbān — "Flight" <button onclick="playAudio('audio/024.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">14:00 – 18:00</span><div class="what">Driver to Diqing Shangri-La Airport (DIG)</div>
@@ -651,7 +703,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pullman_guangzhou_baiyun_airport.jpg?width=800" alt="Pullman Guangzhou Baiyun Airport">
 <table><tr><td>Hotel</td><td><a href="https://all.accor.com/hotel/B2W3/index.en.shtml" target="_blank" rel="noopener">Pullman Guangzhou Baiyun Airport</a> (T1 connected) <span class="verify">VERIFY day-use rate ~¥800/3</span></td></tr><tr><td>Shuttle</td><td>3 min from T1 — free</td></tr><tr><td>Plan</td><td>Sleep until 08:30, breakfast, check out 09:00</td></tr></table>
 <div class="note">Book TWO standard rooms or one twin + rollaway. Day-use packages exist (6h block) — call ahead. Breakfast buffet included for room guests.</div>
-<div class="phrase zh">钟点房 — Zhōngdiǎn fáng — "Hourly room" (day-use) <button onclick="playZh('钟点房')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">钟点房 — Zhōngdiǎn fáng — "Hourly room" (day-use) <button onclick="playAudio('audio/025.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Taxi to Guangzhou South + G-train to HK</div>
@@ -664,7 +716,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Skyline_Panorama_-_Dec_2008.jpg?width=800" alt="Hong Kong skyline Victoria Harbour">
 <table><tr><td>Hotel</td><td><a href="https://www.thepottinger.com/" target="_blank" rel="noopener">The Pottinger Hong Kong</a> (Central) <span class="verify">VERIFY triple</span></td></tr><tr><td>From W. Kowloon</td><td>MTR Tung Chung Line → Hong Kong Stn 8 min, HK$10</td></tr><tr><td>Promenade</td><td>TST Avenue of Stars 星光大道, sunset view to Central</td></tr></table>
 <div class="note">The Pottinger is on Stanley Street, Central — boutique 4-star, ~10 min walk to Lan Kwai Fong. Drop bags, head out for first HK skyline impression.</div>
-<div class="phrase zh">维多利亚港 — Wéiduōlìyà Gǎng — "Victoria Harbour" <button onclick="playZh('维多利亚港')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">维多利亚港 — Wéiduōlìyà Gǎng — "Victoria Harbour" <button onclick="playAudio('audio/026.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">18:00 – 22:00</span><div class="what">Symphony of Lights + halal HK dinner</div>
@@ -689,28 +741,28 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sleeping_Beauty_Castle_Hong_Kong_Disneyland.jpg?width=800" alt="Sleeping Beauty Castle <a href="https://www.hongkongdisneyland.com/" target="_blank" rel="noopener">Hong Kong Disneyland</a>">
 <table><tr><td>Breakfast</td><td>Pottinger Hotel (ask kitchen for no-pork plate) ~HK$200/pax</td></tr><tr><td>Buy tickets</td><td>Klook online -10%: HK$669 / pax (Tier 1 weekday) × 3 = ~HK$1,800 <span class="verify">VERIFY 2026 tier</span></td></tr><tr><td>Transit</td><td>MTR Central → Hong Kong Stn → Tung Chung Line → Sunny Bay (~30 min) → Disneyland Resort Line shuttle (6 min, HK$7.5)</td></tr><tr><td>Park opens</td><td>~10:30 (verify on day; varies seasonally)</td></tr></table>
 <div class="note">Pack: comfortable shoes (you'll walk 12+ km), light rain shell, sunscreen, portable charger, refillable water bottle, <strong>prayer mat for Quiet Room</strong> (not supplied), prayer cap. Klook QR tickets scan at gate — no paper needed. Disneyland Resort Line train has Mickey-shaped windows + Disney character statues — kids/adults alike love it.</div>
-<div class="phrase zh">香港迪士尼樂園 — Xiānggǎng Díshìní Lèyuán — "<a href="https://www.hongkongdisneyland.com/" target="_blank" rel="noopener">Hong Kong Disneyland</a>" <button onclick="playZh('香港迪士尼乐园')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">香港迪士尼樂園 — Xiānggǎng Díshìní Lèyuán — "<a href="https://www.hongkongdisneyland.com/" target="_blank" rel="noopener">Hong Kong Disneyland</a>" <button onclick="playAudio('audio/027.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Park entry + Tomorrowland + 🕌 Dhuhr/Jumu'ah at Quiet Room</div>
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Disneyland_Main_Street.jpg?width=800" alt="Disneyland Main Street USA">
 <table><tr><td>Entry rush</td><td>Iron Man Experience + Ant-Man and The Wasp: Nano Battle! (Tomorrowland) — hit by 11:00 before queues build</td></tr><tr><td>Mid-morning</td><td>Hyperspace Mountain · Mystic Manor 神秘庄园 (Mystic Point — best dark ride in any Disney park)</td></tr><tr><td>Halal lunch ~12:00</td><td>Royal Banquet Hall 皇室宴会厅 (Fantasyland) — halal-certified Hainan chicken rice, curry steamed buns, beef ball rice. ~HK$120/pax × 3 = HK$360</td></tr><tr><td>🕌 Prayer ~13:00</td><td>Quiet Room next to Explorer's Club, Mystic Point — wudhu facilities, barefoot section, prayer area. <strong>Travelers may pray Dhuhr (4 rakat) in lieu of Jumu'ah</strong> per musafir ruling. For full Jumu'ah congregation: leave park 11:30, MTR to <a href="https://www.iuhk.org/about/kowloon-masjid/" target="_blank" rel="noopener">Kowloon Mosque</a>, return ~15:00 (sacrifices ~3h of park time).</td></tr></table>
 <div class="note">HK Disneyland is the world's only Disney park with halal-certified food — Panda Café also offers halal options. The Quiet Room is signposted in Mystic Point; ask a Cast Member if needed. Wudhu sink + clean barefoot area provided. Bring your own prayer mat — not supplied.</div>
-<div class="phrase zh">米老鼠 — Mǐ Lǎoshǔ — "Mickey Mouse" <button onclick="playZh('米老鼠')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">米老鼠 — Mǐ Lǎoshǔ — "Mickey Mouse" <button onclick="playAudio('audio/028.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">14:00 – 18:00</span><div class="what">Adventureland + Grizzly Gulch + Fantasyland</div>
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Disneyland_Grizzly_Gulch.jpg?width=800" alt="Big Grizzly Mountain coaster <a href="https://www.hongkongdisneyland.com/" target="_blank" rel="noopener">Hong Kong Disneyland</a>">
 <table><tr><td>Adventureland</td><td>Jungle River Cruise · Tarzan's Treehouse</td></tr><tr><td>Grizzly Gulch ★</td><td>Big Grizzly Mountain Runaway Mine Cars 灰熊山谷 — HKDL-exclusive coaster, 2-direction launches, the park's signature thrill ride</td></tr><tr><td>Fantasyland</td><td>"it's a small world" (HKDL's version features local touches) · Fairy Tale Forest · Castle photo stop</td></tr><tr><td>Asr ~17:30</td><td>Return to Quiet Room for Asr prayer (4 rakat)</td></tr></table>
 <div class="note">Mid-afternoon shower is common in Hong Kong June — Mystic Manor and "it's a small world" are good rainy-hour indoor backups. PhotoPass photographers stationed at castle take free souvenir shots — pick up via Klook QR. Stay hydrated; humidity is the real fatigue factor, not heat.</div>
-<div class="phrase zh">摩天轮 — Mótiānlún — "Ferris wheel / big spin" <button onclick="playZh('摩天轮')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">摩天轮 — Mótiānlún — "Ferris wheel / big spin" <button onclick="playAudio('audio/029.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">18:00 – 22:00</span><div class="what">Parade + ★ Momentous fireworks + return</div>
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Disneyland_castle_fireworks.jpg?width=800" alt="Disneyland castle fireworks">
 <table><tr><td>Dinner ~18:30</td><td>Halal options inside park: Royal Banquet Hall reopens for dinner OR Tahitian Terrace (Adventureland, vegetarian-friendly). Maghrib ~20:20 at Quiet Room.</td></tr><tr><td>Parade ~19:30</td><td>"Disney Stars on Parade" — Mickey + Friends down Main Street USA</td></tr><tr><td>Fireworks ★ ~20:30</td><td>"Momentous" — 12 min castle projection mapping + drone show + pyrotechnics. THE photo of the trip. Position by 20:00 on Main Street central plaza.</td></tr><tr><td>Park close + transit</td><td>Park closes ~21:00. MTR Resort Line shuttle → Sunny Bay → Tung Chung Line → Central → Pottinger by ~22:30.</td></tr></table>
 <div class="note">Crowd surges right after fireworks — the Resort Line shuttle gets jammed. Wait 15 min at Main Street with a drink, then walk out leisurely. MTR's last train from Sunny Bay ~00:30, so no rush. Big day — sleep well; tomorrow you transit to Shenzhen for <a href="https://www.winnotime.com/" target="_blank" rel="noopener">WINNOTIME</a>.</div>
-<div class="phrase zh">烟火表演 — Yānhuǒ biǎoyǎn — "Fireworks show" <button onclick="playZh('烟火表演')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">烟火表演 — Yānhuǒ biǎoyǎn — "Fireworks show" <button onclick="playAudio('audio/030.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 </div>
 </section>
@@ -729,7 +781,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="block"><span class="time">06:00 – 10:00</span><div class="what">Pottinger checkout + halal breakfast</div>
 <table><tr><td>Checkout</td><td>By 09:00 — leave luggage if early</td></tr><tr><td>Breakfast</td><td>Hotel breakfast (Pottinger has Western options, ask kitchen for no-pork plate) OR <a href="https://www.tripadvisor.com/Restaurant_Review-g294217-d3330314-Reviews-Islamic_Centre_Canteen-Hong_Kong.html" target="_blank" rel="noopener">Islamic Centre Canteen</a> 6F bakery in Wan Chai for pastries</td></tr><tr><td>Taxi</td><td>Central → W. Kowloon ~15 min, HK$70</td></tr></table>
 <div class="note">Skip Lin Heung Teahouse — its cart dim sum has char siu pork, har gow with pork-shrimp filling, and other haram items. Hotel breakfast or grab snacks from any 7-Eleven (look for halal-friendly bakery items) is the simplest route this morning.</div>
-<div class="phrase zh">飲茶 — Yǐn chá (Yum cha) — "Drink tea" / Cantonese dim sum brunch <button onclick="playZh('飲茶')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">飲茶 — Yǐn chá (Yum cha) — "Drink tea" / Cantonese dim sum brunch <button onclick="playAudio('audio/031.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Vibrant Express G5723 W. Kowloon → Futian</div>
@@ -766,7 +818,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="block"><span class="time">06:00 – 10:00</span><div class="what">Atour breakfast + WW prep</div>
 <table><tr><td>Breakfast</td><td>Atour breakfast included (Chinese-Western buffet) OR halal Afeng Muslim 阿凤清真 5 min walk for hand-pulled noodles ¥120/3</td></tr><tr><td>Plan day</td><td>Day 3 is shorter — fair closes ~16:00. Hit Smart Mfg + AI/Software zones</td></tr><tr><td>Suggested</td><td>Block AM for component suppliers; PM for finished + meetings</td></tr></table>
 <div class="note">Day 3 = bargain day. Booth staff close deals to avoid shipping samples back. Best time for quote negotiations on movements, hands, dial blanks, leather. Take photos of business cards immediately.</div>
-<div class="phrase zh">机芯 — Jīxīn — "Movement" (watch caliber) <button onclick="playZh('机芯')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">机芯 — Jīxīn — "Movement" (watch caliber) <button onclick="playAudio('audio/032.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">CEC: Smart Manufacturing Zone + AI & Software</div>
@@ -808,7 +860,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Our_Lady_of_Lourdes_Chapel.jpg?width=800" alt="Shamian Island colonial architecture">
 <table><tr><td>Hotel</td><td><a href="https://www.booking.com/searchresults.html?ss=Bell+Hotel+Shamian+Guangzhou" target="_blank" rel="noopener">The Bell Hotel Shamian Island</a> <span class="verify">VERIFY triple</span></td></tr><tr><td>Taxi</td><td>GZ South → Shamian ~30 min, ¥100; then walk 15 min to Huaisheng</td></tr><tr><td>Mosque</td><td><a href="https://en.wikipedia.org/wiki/Huaisheng_Mosque" target="_blank" rel="noopener">Huaisheng Mosque</a> 怀圣寺, 56 Guangta Rd 光塔路, Liwan — built 627 AD, oldest mosque in China. Free; tourist visits welcome outside prayer times.</td></tr><tr><td>Lunch</td><td>Nur Bostan 努尔布斯坦 (Uyghur halal) directly opposite mosque OR Xinyue Muslim Restaurant 新月清真 nearby — lamb skewers, polo (pilaf), nan ~¥250/3</td></tr></table>
 <div class="note">Skip Lin Heung Tea House Guangzhou — its cart dim sum is loaded with pork (char siu bao, siu mai with pork-shrimp). <a href="https://en.wikipedia.org/wiki/Huaisheng_Mosque" target="_blank" rel="noopener">Huaisheng Mosque</a> is THE highlight of Muslim Guangzhou — 1,400 years old, light tower 光塔 minaret was a Pearl River lighthouse. Surrounding streets have 20+ halal restaurants serving the Hui/Arab/African trader community.</div>
-<div class="phrase zh">怀圣寺 — Huáishèng Sì — "Memorial of the Sage Mosque" <button onclick="playZh('怀圣寺')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">怀圣寺 — Huáishèng Sì — "Memorial of the Sage Mosque" <button onclick="playAudio('audio/033.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">14:00 – 18:00</span><div class="what">Shamian walk + Shangxiajiu 上下九 street food</div>
@@ -821,7 +873,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cantonese_roasted_goose.jpg?width=800" alt="Halal banquet">
 <table><tr><td>Where</td><td>Xiaobei Rd 小北路, Yuexiu 越秀 — Guangzhou's main Muslim trader quarter (Hui + Middle Eastern + African community)</td></tr><tr><td>Pick</td><td>Emirates Palace Restaurant 阿联酋宫 (UAE-style mandi/grill), OR Tianshan Cuisine 天山饭店 (Uyghur halal banquet) — ¥600/3 full banquet</td></tr><tr><td>Order</td><td>Lamb shank with pilaf 抓饭, hand-pulled noodles, mutton stew, fresh nan, mint tea</td></tr><tr><td>Book</td><td>Hotel concierge calls 1 day ahead</td></tr></table>
 <div class="note">Skip Bingsheng (roast goose is non-halal Cantonese signature, served with char siu pork). Xiaobei is unique — China's biggest Arab/African trader hub, hundreds of halal restaurants spanning Middle Eastern, Uyghur, Pakistani. Closer to your taste profile than Cantonese fine dining and a fitting closing meal.</div>
-<div class="phrase zh">清真大餐 — Qīngzhēn dàcān — "Halal banquet" <button onclick="playZh('清真大餐')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">清真大餐 — Qīngzhēn dàcān — "Halal banquet" <button onclick="playAudio('audio/034.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 </div>
 </section>
@@ -845,7 +897,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="block"><span class="time">10:00 – 14:00</span><div class="what">Taxi to CAN airport (T2)</div>
 <table><tr><td>Taxi</td><td>Shamian → CAN T2 ~55 min, ¥180. Leave by 11:00 for 11:30 arrival</td></tr><tr><td>Check-in</td><td>SV885 opens T-3h = 12:25</td></tr><tr><td>Customs</td><td>Declare watch samples if asked; have receipts ready</td></tr></table>
 <div class="note">Friday traffic Shenzhen-Guangzhou is heavy — leaving Tuesday is OK but allow buffer. T2 is Saudia terminal. Check baggage allowance: Saudia 30 kg econ, 40 kg biz; oversize ¥800/bag if over.</div>
-<div class="phrase zh">海关申报 — Hǎiguān shēnbào — "Customs declaration" <button onclick="playZh('海关申报')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
+<div class="phrase zh">海关申报 — Hǎiguān shēnbào — "Customs declaration" <button onclick="playAudio('audio/035.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
 <div class="block"><span class="time">14:00 – 18:00</span><div class="what">SV885 boarding + departure 15:25</div>
@@ -1629,48 +1681,32 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
   }
 })();
 
-// Inline Mandarin TTS for 🔊 buttons. Falls back to Google Translate
-// if no Chinese voice is installed (common on Saudi-region iOS / Win devices).
-function playZh(text){
-  function googleTranslate(){
-    window.open('https://translate.google.com/?sl=zh-CN&tl=en&text='+encodeURIComponent(text)+'&op=translate','_blank');
-  }
-  if(!window.speechSynthesis || !window.SpeechSynthesisUtterance){
-    googleTranslate();
-    return;
-  }
-  try{speechSynthesis.cancel();}catch(e){}
-  function speak(){
-    var voices=speechSynthesis.getVoices();
-    var zh=null;
-    for(var i=0;i<voices.length;i++){
-      var l=(voices[i].lang||'').toLowerCase();
-      if(l.indexOf('zh')===0 || l.indexOf('cmn')===0){zh=voices[i];break;}
+// Native Mandarin audio. Each phrase has a pre-generated MP3 in /audio
+// (created via Google Translate TTS at build time). Works on any device,
+// any browser, no setup. Audio objects are cached for instant replay.
+var __audioCache = {};
+function playAudio(src){
+  try {
+    var a = __audioCache[src];
+    if (!a) {
+      a = new Audio(src);
+      a.preload = 'auto';
+      __audioCache[src] = a;
     }
-    if(!zh){
-      // No Chinese voice on this device — fall back to Google Translate
-      googleTranslate();
-      return;
+    a.currentTime = 0;
+    var p = a.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(function(err){
+        console.warn('Audio failed for', src, err);
+      });
     }
-    var u=new SpeechSynthesisUtterance(text);
-    u.voice=zh; u.lang=zh.lang||'zh-CN';
-    u.rate=0.8; u.pitch=1; u.volume=1;
-    u.onerror=function(){googleTranslate();};
-    speechSynthesis.speak(u);
-  }
-  if(speechSynthesis.getVoices().length===0){
-    var fired=false;
-    function once(){if(!fired){fired=true;speak();}}
-    speechSynthesis.onvoiceschanged=once;
-    setTimeout(once,500);
-  }else{
-    speak();
+  } catch(e) {
+    console.error('playAudio error:', e);
   }
 }
-// Pre-warm voice list (Chrome+Firefox load async)
-if(window.speechSynthesis){
-  try{speechSynthesis.getVoices();
-      speechSynthesis.addEventListener('voiceschanged',function(){});}catch(e){}
+// Legacy fallback (any remaining playZh references)
+function playZh(text){
+  window.open('https://translate.google.com/?sl=zh-CN&tl=en&text='+encodeURIComponent(text)+'&op=translate','_blank');
 }
 </script>
 </body>
