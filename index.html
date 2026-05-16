@@ -227,6 +227,10 @@ button.jump-item .item-text{flex:1;min-width:0}
   button.jump-item{padding:10px 11px;font-size:13.5px}
   button.jump-item .item-num{min-width:54px;font-size:11.5px}
 }
+.weather{font-size:11px;padding:7px 11px;background:linear-gradient(90deg,rgba(74,144,226,.08),var(--soft));border-left:3px solid #4a90e2;border-radius:0 4px 4px 0;margin:0 0 8px;line-height:1.55}
+.weather-line{color:var(--ink)}.weather-line strong{color:var(--accent)}
+.weather-advice{color:var(--muted);font-style:italic;margin-top:2px;font-size:10.5px}
+:root[data-theme="dark"] .weather{background:linear-gradient(90deg,rgba(109,164,216,.12),var(--soft))}
 </style>
 </head>
 <body>
@@ -283,6 +287,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>☀ 41°C RUH / cabin</span><span>⛰ 612m → cruise</span><span>Region: Transit</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="20" y1="15" x2="380" y2="15" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/><circle cx="20" cy="15" r="5" fill="var(--accent)"/><circle cx="380" cy="15" r="5" fill="var(--accent)" opacity=".3"/><text x="30" y="13" font-size="9" fill="currentColor">RUH</text><text x="350" y="13" font-size="9" fill="currentColor">→CAN (next day)</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>05:14 RUH→cabin</strong> → 🌇 <strong>18:42 RUH</strong> · 🌡 <strong>32°C</strong> → <strong>41°C → cabin</strong> · ☔ 0% · 💧 15% · ☀ UV 9 v.high · 🌬 calm</div><div class="weather-advice">👕 Breathable robes; cabin shawl</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Pre-flight at home — no field shots. On 787, ask for window seat over Mecca corridor for sunset cloud-tops.</div>
 
 <div class="blocks">
@@ -318,6 +323,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>☁ 29–33°C humid</span><span>⛰ 110m</span><span>Region: Guangxi karst</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="40" y1="15" x2="360" y2="15" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="40" cy="15" r="5" fill="var(--accent)"/><circle cx="200" cy="15" r="5" fill="var(--accent)"/><circle cx="360" cy="15" r="5" fill="var(--accent)"/><text x="50" y="13" font-size="9" fill="currentColor">CAN airport</text><text x="170" y="13" font-size="9" fill="currentColor">GZ South 广州南</text><text x="320" y="13" font-size="9" fill="currentColor">Yangshuo 阳朔</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>06:32 CAN</strong> → 🌇 <strong>19:18 阳朔</strong> · 🌡 <strong>26°C AM</strong> → <strong>32°C hot</strong> · ☔ 50% PM · 💧 82% · ☀ UV 8 high · 🌬 8 km/h SE</div><div class="weather-advice">👕 Linen + rain shell; sunhat</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> First Yangshuo evening — Li River from Yangshuo bridge at blue-hour ~19:50. Karst silhouettes against pink-purple sky.</div>
 
 <div class="blocks">
@@ -357,6 +363,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>⛅ 28–32°C, PM showers possible</span><span>⛰ 110m</span><span>Region: Guangxi karst</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><path d="M 30 15 Q 100 5 180 15 Q 260 25 360 15" stroke="currentColor" stroke-width="2" fill="none" opacity=".5"/><circle cx="30" cy="15" r="5" fill="var(--accent)"/><circle cx="180" cy="15" r="5" fill="var(--accent)"/><circle cx="280" cy="20" r="5" fill="var(--accent)"/><circle cx="360" cy="15" r="5" fill="var(--accent)"/><text x="38" y="12" font-size="9" fill="currentColor">Yangdi 杨堤</text><text x="160" y="11" font-size="9" fill="currentColor">Xingping 兴坪</text><text x="240" y="29" font-size="9" fill="currentColor">Yulong 遇龙</text><text x="320" y="12" font-size="9" fill="currentColor">Xianggong 相公山</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>05:43 阳朔</strong> → 🌇 <strong>19:12</strong> · 🌡 <strong>26°C dawn</strong> → <strong>32°C peak</strong> · ☔ 60% PM⛈ · 💧 80% · ☀ UV 8 high · 🌬 6 km/h</div><div class="weather-advice">👕 Light cotton; dry bag for raft</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:#fff3cd;border-left:3px solid #856404;border-radius:0 3px 3px 0">🌧 <strong>Weather Plan B:</strong> If heavy rain cancels Xianggong sunset → swap to <a href="https://www.chinadiscovery.com/guilin-tours/yangshuo-bamboo-rafting.html" target="_blank" rel="noopener">Yulong River</a> bridge silhouette (covered if needed) or West Street tea house with karst window view.</div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> ★ Xianggong Mountain 相公山 sunset ~19:45 — the trip's #1 shot. Li River S-bend + 360° karst. Arrive 18:30.</div>
 
@@ -398,6 +405,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>⛅ 28–32°C, PM showers possible</span><span>⛰ 110–880m if Longji</span><span>Region: Guangxi</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="40" y1="15" x2="360" y2="15" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/><circle cx="40" cy="15" r="5" fill="var(--accent)"/><circle cx="200" cy="15" r="4" fill="var(--accent)" opacity=".5"/><circle cx="360" cy="15" r="4" fill="var(--accent)" opacity=".5"/><text x="50" y="13" font-size="9" fill="currentColor">Yangshuo</text><text x="160" y="11" font-size="9" fill="currentColor">option A: Longji (long)</text><text x="270" y="11" font-size="9" fill="currentColor">option B: Local + show</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>05:43</strong> → 🌇 <strong>19:13</strong> · 🌡 <strong>26°C</strong> → <strong>32°C</strong> · ☔ 70% PM⛈ · 💧 78% · ☀ UV 7 high · 🌬 10 km/h</div><div class="weather-advice">👕 Trail shoes if Longji; raincoat</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Option A: Longji terraces 'water-filling season' reflections, dawn ~06:00. Option B: <a href="https://www.chinadiscovery.com/guilin-tours/yangshuo-bamboo-rafting.html" target="_blank" rel="noopener">Yulong River</a> bridge silhouette at golden hour ~18:30.</div>
 
 <div style="background:var(--soft);padding:6px 10px;border-radius:4px;margin-bottom:8px;font-size:11px">
@@ -440,6 +448,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>☁→🌤 dropping to 18–22°C in Dali</span><span>⛰ 110m → 1,900m</span><span>Region: → Yunnan</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="30" y1="15" x2="370" y2="15" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="30" cy="15" r="5" fill="var(--accent)"/><circle cx="180" cy="15" r="5" fill="var(--accent)"/><circle cx="280" cy="15" r="5" fill="var(--accent)"/><circle cx="370" cy="15" r="5" fill="var(--accent)"/><text x="38" y="13" font-size="9" fill="currentColor">Yangshuo</text><text x="135" y="11" font-size="9" fill="currentColor">Kunming S (transfer)</text><text x="252" y="11" font-size="9" fill="currentColor">Dali</text><text x="332" y="11" font-size="9" fill="currentColor">Xizhou</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>transit train</strong> → 🌇 <strong>19:30 大理</strong> · 🌡 <strong>28°C→18°C</strong> → <strong>32°C→24°C dip</strong> · ☔ 30% · 💧 75%→62% · ☀ UV 6 mod · 🌬 calm</div><div class="weather-advice">👕 Travel-comfy; layer for Dali arrival</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Train day. Window seat on right side (east-facing) for Yunnan plateau approach. Sun behind you in morning, lighting karst peaks.</div>
 
 <div class="blocks">
@@ -478,6 +487,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌤 18–24°C, fresh + dry</span><span>⛰ 1,966–3,500m</span><span>Region: Yunnan</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><path d="M 50 15 L 180 15 L 320 15" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="50" cy="15" r="5" fill="var(--accent)"/><circle cx="180" cy="6" r="5" fill="var(--accent)"/><circle cx="320" cy="22" r="5" fill="var(--accent)"/><text x="58" y="13" font-size="9" fill="currentColor">Xizhou base</text><text x="155" y="4" font-size="9" fill="currentColor">↑ Cangshan 苍山</text><text x="290" y="29" font-size="9" fill="currentColor">→ Erhai 洱海</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>06:18 大理</strong> → 🌇 <strong>19:42</strong> · 🌡 <strong>16°C</strong> → <strong>24°C</strong> · ☔ 30% AM · 💧 60% · ☀ UV 7 high · 🌬 8 km/h</div><div class="weather-advice">👕 Layers; evening jacket; UV strong</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:#fff3cd;border-left:3px solid #856404;border-radius:0 3px 3px 0">🌧 <strong>Weather Plan B:</strong> If Cangshan cable car closed (wind > 8 m/s or fog) → switch to Bai Cultural Museum + Xizhou Bai architecture courtyards (driver day-trip ~30 min) + Erhai east shore cycling (rain shelters every 2 km).</div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> ★ Cangshan from Erhai east shore late afternoon ~17:30 — mountain reflections + Bai fishing boats. Cangshan peaks lit by side sun.</div>
 
@@ -518,6 +528,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌤 16–22°C cool</span><span>⛰ 2,400m</span><span>Region: Yunnan</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="40" y1="15" x2="360" y2="15" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="40" cy="15" r="5" fill="var(--accent)"/><circle cx="360" cy="15" r="5" fill="var(--accent)"/><text x="50" y="13" font-size="9" fill="currentColor">Dali Station</text><text x="305" y="13" font-size="9" fill="currentColor">Lijiang Old Town</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>06:20 丽江</strong> → 🌇 <strong>19:50</strong> · 🌡 <strong>14°C</strong> → <strong>22°C</strong> · ☔ 20% · 💧 55% · ☀ UV 8 v.high alt · 🌬 6 km/h</div><div class="weather-advice">👕 Layered; UV hat + sunglasses</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Lijiang Old Town from Wangu Pavilion 万古楼, blue-hour ~20:30 — red tile roofs glowing, mountains darkening behind.</div>
 
 <div class="blocks">
@@ -556,6 +567,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌤 14–22°C, UV high at altitude</span><span>⛰ 2,400m</span><span>Region: Yunnan</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><path d="M 30 18 L 130 12 L 260 8 L 370 18" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/><circle cx="30" cy="18" r="5" fill="var(--accent)"/><circle cx="130" cy="12" r="5" fill="var(--accent)"/><circle cx="260" cy="8" r="5" fill="var(--accent)"/><circle cx="370" cy="18" r="5" fill="var(--accent)"/><text x="38" y="29" font-size="9" fill="currentColor">Old Town</text><text x="100" y="26" font-size="9" fill="currentColor"><a href="https://www.travelchinaguide.com/attraction/yunnan/lijiang/black-dragon-pool.htm" target="_blank" rel="noopener">Black Dragon Pool</a></text><text x="225" y="4" font-size="9" fill="currentColor">Baisha 白沙</text><text x="338" y="29" font-size="9" fill="currentColor">Mu Mansion</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>06:20</strong> → 🌇 <strong>19:51</strong> · 🌡 <strong>14°C</strong> → <strong>22°C</strong> · ☔ 20% · 💧 55% · ☀ UV 8 v.high · 🌬 6 km/h</div><div class="weather-advice">👕 Same as Day 7</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> ★ <a href="https://www.travelchinaguide.com/attraction/yunnan/lijiang/black-dragon-pool.htm" target="_blank" rel="noopener">Black Dragon Pool</a> 黑龙潭 dawn ~07:00 — Five Phoenix Pavilion + Jade Dragon Snow Mountain reflection. Mirror-still water before crowds.</div>
 
 <div class="blocks">
@@ -595,6 +607,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌤 8–18°C cold + UV</span><span>⛰ 2,400→1,800→3,300m</span><span>Region: Yunnan-Tibetan</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><path d="M 30 20 L 180 24 L 300 8 L 370 6" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/><circle cx="30" cy="20" r="5" fill="var(--accent)"/><circle cx="180" cy="24" r="5" fill="var(--accent)"/><circle cx="300" cy="8" r="5" fill="var(--accent)"/><circle cx="370" cy="6" r="5" fill="var(--accent)"/><text x="38" y="14" font-size="9" fill="currentColor">Lijiang 2,400m</text><text x="150" y="20" font-size="9" fill="currentColor">TLG 1,800m</text><text x="260" y="22" font-size="9" fill="currentColor">Shangri-La 3,300m</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>06:21→06:27</strong> → 🌇 <strong>19:54→19:55</strong> · 🌡 <strong>14°C→7°C</strong> → <strong>22°C→17°C</strong> · ☔ 40% · 💧 60%→55% · ☀ UV 8→9 · 🌬 12 km/h cooler</div><div class="weather-advice">👕 Layered cold/warm; rain shell</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:#fff3cd;border-left:3px solid #856404;border-radius:0 3px 3px 0">🌧 <strong>Weather Plan B:</strong> If TLG closed for landslide/rain → driver continues directly to Shangri-La (skip gorge), use saved 2h for early Dukezong Old Town walk + sunset at Guishan Park. If road from Lijiang itself impassable, swap to flight LJG → DIG (45 min).</div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--tibetan, var(--accent));border-radius:0 3px 3px 0">🕌 <strong>Prayer times (Shangri-La, MWL method):</strong> Fajr 04:50 · Sunrise 06:35 · Dhuhr 13:30 · Asr 17:35 · Maghrib 20:20 · Isha 22:10<br><em>Shangri-La (3,300m) — first night at altitude</em></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> <a href="https://www.chinahighlights.com/lijiang/attraction/tiger-leaping-gorge.htm" target="_blank" rel="noopener">Tiger Leaping Gorge</a> Upper Platform midday — sun overhead lights the gorge spray. NOT a sunset shot. For Shangri-La: arrive Dukezong by 19:30 for prayer-wheel golden hour.</div>
@@ -634,6 +647,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌤 8–17°C, thin air</span><span>⛰ 3,300m</span><span>Region: Yunnan-Tibetan</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><path d="M 30 18 L 200 6 L 370 18" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/><circle cx="30" cy="18" r="5" fill="var(--accent)"/><circle cx="200" cy="6" r="5" fill="var(--accent)"/><circle cx="370" cy="18" r="5" fill="var(--accent)"/><text x="38" y="29" font-size="9" fill="currentColor">Hotel</text><text x="155" y="4" font-size="9" fill="currentColor">Shika 石卡雪山</text><text x="320" y="29" font-size="9" fill="currentColor">Dukezong 独克宗</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>06:27 香格里拉</strong> → 🌇 <strong>19:58</strong> · 🌡 <strong>7°C dawn</strong> → <strong>17°C peak</strong> · ☔ 30% · 💧 55% · ☀ UV 9 extreme alt · 🌬 12 km/h</div><div class="weather-advice">👕 Warm layers + UV hat + sunglasses</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--tibetan, var(--accent));border-radius:0 3px 3px 0">🕌 <strong>Prayer times (Shangri-La, MWL method):</strong> Fajr 04:50 · Sunrise 06:35 · Dhuhr 13:30 · Asr 17:35 · Maghrib 20:20 · Isha 22:10<br><em>Shangri-La — Shika Mountain AM, Dukezong PM</em></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> ★ <a href="https://www.trip.com/travel-guide/attraction/shangri-la/shika-snow-mountain-65556/" target="_blank" rel="noopener">Shika Snow Mountain</a> 石卡雪山 cable car summit ~11:00 — 4,449m alpine panorama, Tibetan plateau in all directions; on a clear day, Meili Snow Mountain 梅里雪山 13 peaks visible 200 km west.</div>
 
@@ -673,6 +687,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌤 6–16°C alpine</span><span>⛰ 3,500–4,100m</span><span>Region: Yunnan-Tibetan</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><path d="M 30 22 L 130 14 L 230 6 L 330 14 L 370 22" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/><circle cx="30" cy="22" r="5" fill="var(--accent)"/><circle cx="130" cy="14" r="5" fill="var(--accent)"/><circle cx="230" cy="6" r="5" fill="var(--accent)"/><circle cx="330" cy="14" r="5" fill="var(--accent)"/><circle cx="370" cy="22" r="5" fill="var(--accent)"/><text x="38" y="14" font-size="9" fill="currentColor">Hotel</text><text x="105" y="29" font-size="9" fill="currentColor">Shudu 属都</text><text x="200" y="29" font-size="9" fill="currentColor">Bita 碧塔</text><text x="298" y="29" font-size="9" fill="currentColor">Militang</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>06:27 普达措</strong> → 🌇 <strong>19:59</strong> · 🌡 <strong>4°C alpine</strong> → <strong>15°C</strong> · ☔ 40% PM · 💧 60% · ☀ UV 10 extreme · 🌬 15 km/h windy</div><div class="weather-advice">👕 Windbreaker mandatory + thermal layer</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:#fff3cd;border-left:3px solid #856404;border-radius:0 3px 3px 0">🌧 <strong>Weather Plan B:</strong> If Pudacuo closed for snow/storm → swap to Napa Lake 纳帕海 grasslands (lower elevation, more weather-resilient — yaks, horses, wide pasture) OR extended Dukezong Old Town walking + tea-house cluster.</div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--tibetan, var(--accent));border-radius:0 3px 3px 0">🕌 <strong>Prayer times (Shangri-La, MWL method):</strong> Fajr 04:51 · Sunrise 06:36 · Dhuhr 13:30 · Asr 17:36 · Maghrib 20:20 · Isha 22:10<br><em>Pudacuo trek day — pack Fajr early; carry prayer mat</em></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Shudu Lake 属都湖 dawn ~07:30 from the boardwalk — mist on water + yaks grazing. Bita Lake afternoon ~15:00 for forest-light filtering through pines.</div>
@@ -704,47 +719,54 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 </div>
 </section>
 
-<!-- ============ JUN 23 — SHANGRI-LA BUFFER DAY ============ -->
+<!-- ============ JUN 23 — SHANGRI-LA DAY 4: PICK YOUR PLAN ============ -->
 <section class="page" data-region="tibetan">
 <div class="region-bar"></div>
 <div class="day-head">
-<div><div class="date">Day 12 · Tue 23 June</div><div class="place">Shangri-La — Buffer / Optional</div></div>
-<div class="stats"><span>🌤 7–17°C</span><span>⛰ 3,300m (or up to 3,800m)</span><span>Region: Yunnan-Tibetan</span></div>
+<div><div class="date">Day 12 · Tue 23 June</div><div class="place">Shangri-La — Pick your plan</div></div>
+<div class="stats"><span>🌤 7–17°C</span><span>⛰ 3,300m (or up to 4,300m)</span><span>Region: Yunnan-Tibetan</span></div>
 </div>
-<div class="minimap"><svg viewBox="0 0 400 30"><line x1="30" y1="15" x2="370" y2="15" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity=".3"/><circle cx="30" cy="15" r="5" fill="var(--accent)"/><circle cx="200" cy="15" r="4" fill="var(--accent)" opacity=".5"/><circle cx="370" cy="15" r="4" fill="var(--accent)" opacity=".5"/><text x="38" y="13" font-size="9" fill="currentColor">Rest base</text><text x="155" y="11" font-size="9" fill="currentColor">Opt: Meili / Balagezong</text></svg></div>
-<div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--tibetan, var(--accent));border-radius:0 3px 3px 0">🕌 <strong>Prayer times (Shangri-La, MWL method):</strong> Fajr 04:51 · Sunrise 06:36 · Dhuhr 13:31 · Asr 17:36 · Maghrib 20:20 · Isha 22:10<br><em>Buffer day — pray Fajr at hotel, others as you go</em></div>
-<div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Napa Lake 纳帕海 grasslands at sunset ~20:00 — yak silhouettes, wide pastel sky. OR Dukezong Old Town night ~21:30 with yak-butter lamps lit.</div>
+<div class="minimap"><svg viewBox="0 0 400 30"><line x1="20" y1="15" x2="380" y2="15" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity=".3"/><circle cx="50" cy="15" r="4" fill="var(--accent)"/><circle cx="140" cy="15" r="4" fill="var(--accent)"/><circle cx="240" cy="15" r="4" fill="var(--accent)"/><circle cx="350" cy="15" r="4" fill="var(--accent)"/><text x="20" y="11" font-size="9" fill="currentColor">A: Cultural</text><text x="115" y="11" font-size="9" fill="currentColor">B: Adventure</text><text x="215" y="11" font-size="9" fill="currentColor">C: Meili long-day</text><text x="320" y="11" font-size="9" fill="currentColor">D: Recovery</text></svg></div>
 
-<div style="background:var(--soft);padding:6px 10px;border-radius:4px;margin-bottom:8px;font-size:11px">
-<strong>Choose ONE of three:</strong> (A) Rest day in town — recommended if anyone is recovering. (B) Meili Snow Mountain at Feilai Si 飞来寺 — long but spectacular. (C) Balagezong canyon + glass walkway — adventurous.
-</div>
+<div style="background:var(--soft);padding:8px 11px;border-radius:6px;margin-bottom:10px;font-size:12px"><strong>Decision morning of Jun 22.</strong> Plans A and D are quieter (3,300m base). Plans B and C are full-day excursions (driving + altitude work). Below is <strong>recommended Plan A — Tibetan Cultural Immersion</strong>. Alternatives summarized at end of page.</div>
 
 <div class="blocks">
-<div class="block"><span class="time">06:00 – 10:00</span><div class="what">Option A: Slow Tibetan breakfast + reading</div>
-<table><tr><td>Where</td><td>Hotel or Sangha Café in Dukezong</td></tr><tr><td>Cost</td><td>¥80/3</td></tr><tr><td>Option B</td><td>06:30 depart for Meili (4h drive, ¥1,500 driver)</td></tr><tr><td>Option C</td><td>07:30 depart for Balagezong (2.5h, ¥1,000 driver)</td></tr></table>
-<div class="note">If you didn't sleep well at altitude, Option A is medicine. Walking + market browsing is enough output today. Tomorrow has a flight.</div>
+<div class="block"><span class="time">06:00 – 10:00</span><div class="what">Plan A: Sunrise at Napa Lake 纳帕海 + horse ride</div>
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Napa_Lake_Shangri-La.jpg?width=800" alt="Napa Lake grasslands sunrise">
+<table><tr><td>Depart</td><td>Hotel 05:30 (with driver) → Napa Lake 6 km NW, arrive 06:00 just before sunrise</td></tr><tr><td>Cost</td><td>Entry ¥30 + horse ride ¥80/pax × 3 = ¥330 + driver ¥150</td></tr><tr><td>Activity</td><td>Sunrise (~06:28) over the grasslands; mounted ride along the basin trail ~40 min</td></tr><tr><td>Return</td><td>Breakfast at Sangha Café in Dukezong by 09:30 — Tibetan yak butter tea + Naxi flatbread</td></tr></table>
+<div class="note">Golden hour at Napa is THE Shangri-La image — wide pasture, yak herds, distant peaks lit pink. June grass is lush; bring layers (3,260m, 7°C at sunrise rising to ~14°C by 09:00).</div>
+<div class="phrase zh">骑马 — Qí mǎ — "Ride a horse" <button onclick="playAudio('audio/032.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
-<div class="block"><span class="time">10:00 – 14:00</span><div class="what">Option A: Dukezong morning market 早市 + Thangka workshop</div>
-<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buddha_Shakyamuni_as_Lord_of_the_Munis.jpg?width=800" alt="Thangka painting Tibetan Buddhist art">
-<table><tr><td>Market</td><td>Jincheng St 金城街, morning vendors of Tibetan spices, beads, knives (no purchase)</td></tr><tr><td>Thangka studio</td><td>Visit a master painter; ~¥150 for 1h talk + tea</td></tr><tr><td>Option B</td><td>Meili viewpoint at Feilai Si 飞来寺, 13 peaks at 6,740m</td></tr></table>
-<div class="note">Thangka are sacred Buddhist scroll paintings — a single piece takes months. Negotiating prices is OK but be respectful — they are religious objects, not just art.</div>
+<div class="block"><span class="time">10:00 – 14:00</span><div class="what">Thangka workshop + Tibetan family lunch</div>
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buddha_Shakyamuni_as_Lord_of_the_Munis.jpg?width=800" alt="Thangka painting demonstration">
+<table><tr><td>Workshop</td><td>Commercial Thangka studio in Dukezong (not a monastery) — master painter live demonstration; you try a small mineral-pigment practice piece</td></tr><tr><td>Cost</td><td>~¥150/pax × 3 = ¥450 (2h workshop)</td></tr><tr><td>Lunch</td><td>Tibetan family home meal (hotel concierge arranges with halal Hui family) — yak stew, momos, fried barley, butter tea ~¥400/3</td></tr><tr><td>Cultural</td><td>Conversation about Tibetan-Hui Muslim heritage in Shangri-La (the city has a 500-year-old Hui community)</td></tr></table>
+<div class="note">Thangka are sacred Tibetan Buddhist scroll paintings — workshops are commercial art schools, not temples. A single thangka takes a master 3–18 months; you get to see pigments ground from minerals (lapis, malachite, cinnabar) and apply a small section.</div>
 <div class="phrase zh">唐卡 — Tángkǎ — "Thangka" <button onclick="playAudio('audio/023.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
-<div class="block"><span class="time">14:00 – 18:00</span><div class="what">Option A: Napa Lake 纳帕海 grasslands</div>
-<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%9B%AA%E5%B1%B1%E4%B8%8A%E7%9A%84%E7%89%A7%E5%9C%BA.JPG?width=800" alt="Napa Lake grasslands Shangri-La">
-<table><tr><td>Where</td><td>Napahai 纳帕海, 8 km NW of town</td></tr><tr><td>Entry</td><td>¥30 / pax; horse ride ¥80/pax optional</td></tr><tr><td>Hours</td><td>08:30–18:00</td></tr><tr><td>Taxi</td><td>~¥80 RT</td></tr></table>
-<div class="note">June grass is green; black-necked cranes have migrated north (winter only). Wide skies, yak herds, brief easy horse rides. Lower energy demand than Pudacuo.</div>
+<div class="block"><span class="time">14:00 – 18:00</span><div class="what">Yunnan-Hui halal cooking class + souvenir shopping</div>
+<table><tr><td>Cooking</td><td>Halal Hui-Tibetan cooking class at local home — yak butter tea (酥油茶) properly, momos (蒸饺), tsampa (糌粑), fried barley (炒面). Takes everything you ate at lunch and shows how it&apos;s made.</td></tr><tr><td>Cost</td><td>~¥250/pax × 3 = ¥750 (3h hands-on)</td></tr><tr><td>Then</td><td>Dukezong morning market 早市 for souvenirs — yak wool scarves, prayer flags (decorative, not religious-functional), turquoise jewelry, Pu&apos;er tea cakes from local Yunnan</td></tr></table>
+<div class="note">Bring photos of the dishes from lunch as reference. Most cooking studios in Dukezong offer halal options if asked 24h advance. Souvenirs: prefer fixed-price shops over street stalls for clearer pricing.</div>
 </div>
 
-<div class="block"><span class="time">18:00 – 22:00</span><div class="what">Final Shangri-La dinner + pack</div>
-<table><tr><td>Dinner</td><td>Tibetan family dinner at Karma Café or hotel — ¥350/3</td></tr><tr><td>Pack</td><td>All checked bags; airport-ready for tomorrow PM</td></tr><tr><td>Souvenirs</td><td>Yak wool scarf ¥150, turquoise bead ~¥80, tsampa flour ¥30</td></tr></table>
-<div class="note">Tomorrow's flight is 21:30 — you have most of the day. Pack tonight to free morning. Use hotel concierge to confirm flight + airport transfer time.</div>
+<div class="block"><span class="time">18:00 – 22:00</span><div class="what">Guozhuang folk dance + sunset prayer wheel + dinner</div>
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Guishan_Temple_giant_prayer_wheel_swastika.JPG?width=800" alt="Shangri-La sunset Guishan Park">
+<table><tr><td>Sifang Square</td><td>Sunset Guozhuang 锅庄 — Tibetan circle dance every evening ~19:30; locals + visitors join hands (no religious significance; secular folk celebration)</td></tr><tr><td>View</td><td>Sunset over Dukezong rooftops + Tibetan plateau from Guishan Park overlook (climb is gentle, 10 min)</td></tr><tr><td>Dinner</td><td>Final Tibetan-Hui halal yak hotpot at Tongda Muslim 通达清真 ~¥400/3</td></tr><tr><td>Pack</td><td>Tonight — tomorrow you fly out at 21:30 from DIG</td></tr></table>
+<div class="note">Guozhuang dance at Sifang Square is a daily Shangri-La tradition — visitors are warmly invited to join the outer circle. No skill required, just follow your neighbors. Best ~30 min of cultural immersion you&apos;ll find in a Tibetan town.</div>
+<div class="phrase zh">扎西德勒 — Zhāxī délè — "Tashi delek" (Tibetan greeting) <button onclick="playAudio('audio/036.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 </div>
+
+<div style="background:var(--soft);padding:10px 12px;border-radius:6px;margin-top:10px;font-size:12px"><strong>Alternative plans (swap A entirely if preferred):</strong>
+<table style="width:100%;margin-top:6px;font-size:11.5px">
+<tr><td style="vertical-align:top;width:90px;padding:3px 6px 3px 0"><strong>Plan B: Balagezong adventure</strong></td><td style="padding:3px 0">Full day 巴拉格宗 alpine canyon + glass walkway + cable car. Driver 06:00 hotel pickup (2.5h to gate). Entry+shuttle ¥220 / pax. Return ~19:00. Spectacular but tiring; 2× altitude swings.</td></tr>
+<tr><td style="vertical-align:top;padding:3px 6px 3px 0"><strong>Plan C: Meili Snow Mountain</strong></td><td style="padding:3px 0">The trip&apos;s most iconic mountain experience. Pre-dawn 05:00 departure (4h drive) → Feilai Si overlook (just the viewpoint, no temple visits) → 13-peak sunrise panorama with luck. Return ~20:00. Hard but unforgettable. Driver ¥1,500.</td></tr>
+<tr><td style="vertical-align:top;padding:3px 6px 3px 0"><strong>Plan D: Active rest</strong></td><td style="padding:3px 0">Late breakfast 09:00 → Tianshengqiao Hot Springs 天生桥温泉 (private rooms ¥80/pax, 2h soak) → Napa Lake e-bike afternoon (flat, easy) → home dinner. Genuine recovery if anyone has lingering altitude symptoms.</td></tr>
+</table>
+</div>
+
 </section>
-
 <!-- ============ JUN 24 — LAST AM SHANGRI-LA + FLIGHT DIG→CAN ============ -->
 <section class="page" data-region="prd">
 <div class="region-bar"></div>
@@ -753,17 +775,20 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌤 9–17°C → 28°C humid</span><span>⛰ 3,300m → sea level</span><span>Region: → Pearl River Delta</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="30" y1="15" x2="370" y2="15" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="30" cy="15" r="5" fill="var(--accent)"/><circle cx="180" cy="15" r="5" fill="var(--accent)"/><circle cx="370" cy="15" r="5" fill="var(--accent)"/><text x="38" y="13" font-size="9" fill="currentColor">Dukezong</text><text x="150" y="11" font-size="9" fill="currentColor">DIG Diqing airport</text><text x="320" y="11" font-size="9" fill="currentColor">CAN 00:30+1</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>06:28→cabin</strong> → 🌇 <strong>20:00→23+</strong> · 🌡 <strong>7°C→cabin</strong> → <strong>17°C→cabin</strong> · ☔ 30% · 💧 55% · ☀ UV 9 ground · 🌬 calm</div><div class="weather-advice">👕 Layered; carry warm + pre-pack rain</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Final Shangri-La morning ~06:30 — Dukezong roofs in dawn mist. Last high-altitude golden hour of trip.</div>
 
 <div class="blocks">
-<div class="block"><span class="time">06:00 – 10:00</span><div class="what">Slow morning — last yak butter tea</div>
-<table><tr><td>Where</td><td>Dukezong café, hotel checkout 12:00</td></tr><tr><td>Activity</td><td>Walk Dukezong streets one more time; final photos</td></tr><tr><td>Cost</td><td>~¥100/3 breakfast</td></tr></table>
-<div class="note">Tonight's flight is late. Use morning to wind down rather than cram a final activity. Reading + coffee + writing postcards is the right pace.</div>
+<div class="block"><span class="time">06:00 – 10:00</span><div class="what">Sunrise photo at Guishan + final souvenir hunt</div>
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town,_Shangri-La_-_panoramio.jpg?width=800" alt="Sunrise over Dukezong rooftops">
+<table><tr><td>06:00–07:30</td><td>Climb Guishan Park 龟山公园 in pre-dawn dark (10 min, headlamps) for sunrise (~06:28) over Dukezong&apos;s tile rooftops + distant Tibetan plateau. THE last-day photo.</td></tr><tr><td>07:30–09:00</td><td>Breakfast at Sangha Café (Dukezong) — final yak butter tea + Naxi flatbread + fresh roasted barley. ¥120/3.</td></tr><tr><td>09:00–10:00</td><td>Dukezong morning market 早市 for last souvenirs: turquoise bead bracelet (¥80–150), yak wool scarf (¥150–300), pressed Pu&apos;er tea cake (¥100–400 depending on year/region — see Appendix H), Tibetan calligraphy print or thangka miniature</td></tr></table>
+<div class="note">Don&apos;t pack souvenirs at hotel — bring a foldable duffle to the market and carry direct to airport. Saves repacking. Cash preferred at morning market; some stalls accept WeChat Pay.</div>
+<div class="phrase zh">多少钱? — Duōshao qián? — "How much?" <button onclick="playAudio('audio/002.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
-<div class="block"><span class="time">10:00 – 14:00</span><div class="what">Lunch + bag store + flight prep</div>
-<table><tr><td>Lunch</td><td>Tibetan noodles 藏面 + yak dumplings ¥220/3</td></tr><tr><td>Storage</td><td>Hotel after checkout (free)</td></tr><tr><td>Confirm</td><td>MU5773 status on Trip.com or China Eastern app</td></tr></table>
-<div class="note">DIG → CAN flight is MU5773 evening departure <span class="verify">VERIFY exact 21:30 dep</span>. Monsoon weather can shift schedules in Yunnan — confirm at 12:00.</div>
+<div class="block"><span class="time">10:00 – 14:00</span><div class="what">Hotel checkout + halal lunch + flight confirmation</div>
+<table><tr><td>Checkout</td><td>Hotel by 12:00 — bags stored free at front desk until afternoon transfer</td></tr><tr><td>Lunch</td><td>Final halal meal: Muslim Plateau Yak Beef Restaurant 清真高原牦牛肉 — Tibetan-Hui yak noodle soup + dumplings ¥220/3</td></tr><tr><td>Optional</td><td>30-min foot massage 足疗 nearby ¥80/pax — last altitude-recovery touch before the flight + onward HK travel</td></tr><tr><td>Confirm</td><td>MU5773 status on Trip.com / China Eastern app at 12:00 — Yunnan monsoon can shift evening schedules <span class="verify">VERIFY 21:30 dep</span></td></tr></table>
+<div class="note">If MU5773 is delayed &gt;2h, alternatives: switch to next-day flight (DIG has 7/wk to CAN) or take overnight bus to Lijiang (5h, ¥150) + fly LJG→CAN next morning. Hotel will help re-route via WeChat.</div>
 <div class="phrase zh">航班 — Hángbān — "Flight" <button onclick="playAudio('audio/024.mp3')" type="button" class="audio-btn" title="Play Mandarin pronunciation">🔊</button></div>
 </div>
 
@@ -788,6 +813,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌧 28–32°C humid, sea breeze</span><span>⛰ sea level</span><span>Region: PRD</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><path d="M 30 15 L 130 15 L 230 15 L 330 15" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="30" cy="15" r="5" fill="var(--accent)"/><circle cx="130" cy="15" r="5" fill="var(--accent)"/><circle cx="270" cy="15" r="5" fill="var(--accent)"/><circle cx="370" cy="15" r="5" fill="var(--accent)"/><text x="38" y="13" font-size="9" fill="currentColor">CAN 00:30</text><text x="100" y="11" font-size="9" fill="currentColor">Pullman catnap</text><text x="220" y="11" font-size="9" fill="currentColor">GZ South</text><text x="320" y="11" font-size="9" fill="currentColor">HK W. Kowloon</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>05:44 CAN→HK</strong> → 🌇 <strong>19:11 HK</strong> · 🌡 <strong>28°C</strong> → <strong>33°C hot</strong> · ☔ 60% PM · 💧 85% · ☀ UV 9 extreme · 🌬 12 km/h</div><div class="weather-advice">👕 Tropical-light + rain shell + sunscreen</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Hong Kong arrival evening — Tsim Sha Tsui promenade ~19:00 for Symphony of Lights + Central skyline. Use bridge railing as foreground stabilizer.</div>
 
 <div class="blocks">
@@ -826,6 +852,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌧 28–33°C humid, PM thunder possible</span><span>⛰ sea level (Lantau Island)</span><span>Region: PRD · Family day</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="30" y1="15" x2="370" y2="15" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="30" cy="15" r="5" fill="var(--accent)"/><circle cx="130" cy="15" r="5" fill="var(--accent)"/><circle cx="240" cy="15" r="5" fill="var(--accent)"/><circle cx="370" cy="15" r="5" fill="var(--accent)"/><text x="38" y="13" font-size="9" fill="currentColor">Pottinger</text><text x="95" y="11" font-size="9" fill="currentColor">HK Stn → Sunny Bay</text><text x="205" y="11" font-size="9" fill="currentColor">Resort Line 迪士尼綫</text><text x="320" y="11" font-size="9" fill="currentColor">迪士尼樂園 Park</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>05:43 HK</strong> → 🌇 <strong>19:13</strong> · 🌡 <strong>28°C</strong> → <strong>33°C</strong> · ☔ 55% PM⛈ · 💧 85% · ☀ UV 9 extreme · 🌬 10 km/h</div><div class="weather-advice">👕 Park-ready: walking shoes + hat + raincoat</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> ★ Sleeping Beauty Castle 睡公主城堡 during "Momentous" fireworks + projection mapping ~20:30 (12 min). Get position on Main Street USA central plaza by 20:00 for unobstructed view. Park castle is the photo of the trip.</div>
 
 <div class="blocks">
@@ -867,6 +894,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌧 28–33°C, humid, AM thunder</span><span>⛰ sea level</span><span>Region: PRD · WW Day 2</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="30" y1="15" x2="370" y2="15" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="30" cy="15" r="5" fill="var(--accent)"/><circle cx="120" cy="15" r="5" fill="var(--accent)"/><circle cx="220" cy="15" r="5" fill="var(--accent)"/><circle cx="370" cy="15" r="5" fill="var(--accent)"/><text x="38" y="13" font-size="9" fill="currentColor">Pottinger</text><text x="90" y="11" font-size="9" fill="currentColor">W. Kowloon</text><text x="200" y="11" font-size="9" fill="currentColor">Futian 福田</text><text x="320" y="11" font-size="9" fill="currentColor">CEC + Atour Hotel</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>05:43→05:42 SZX</strong> → 🌇 <strong>19:13</strong> · 🌡 <strong>28°C</strong> → <strong>33°C</strong> · ☔ 50% PM · 💧 85% · ☀ UV 9 extreme · 🌬 10 km/h</div><div class="weather-advice">👕 Smart casual + emergency umbrella</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Vibrant Express window seat right side for Pearl River Delta industrial sprawl. Evening — Shenzhen Pingxia Square neon ~21:00 for cyberpunk aesthetic.</div>
 
 <div class="blocks">
@@ -904,6 +932,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌧 28–33°C, PM thunder</span><span>⛰ sea level</span><span>Region: PRD · WW Day 3 (final)</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="40" y1="15" x2="360" y2="15" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/><circle cx="40" cy="15" r="5" fill="var(--accent)"/><circle cx="200" cy="15" r="5" fill="var(--accent)"/><circle cx="360" cy="15" r="5" fill="var(--accent)"/><text x="48" y="13" font-size="9" fill="currentColor">Atour Hotel</text><text x="160" y="11" font-size="9" fill="currentColor">CEC final day</text><text x="280" y="11" font-size="9" fill="currentColor">Optional: Dafen / Coco Park</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>05:42 深圳</strong> → 🌇 <strong>19:13</strong> · 🌡 <strong>28°C</strong> → <strong>33°C</strong> · ☔ 60% PM⛈ · 💧 88% · ☀ UV 9 extreme · 🌬 12 km/h</div><div class="weather-advice">👕 Convention-ready; carry raincoat</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> ★ Shenzhen Civic Center 市民中心 light show 19:30 (~20 min) — synchronized facade animation on Futian skyline. Stand at Lianhua Hill for elevated view.</div>
 
 <div class="blocks">
@@ -940,6 +969,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌤 28–33°C humid</span><span>⛰ sea level</span><span>Region: PRD · final night</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="30" y1="15" x2="370" y2="15" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="30" cy="15" r="5" fill="var(--accent)"/><circle cx="170" cy="15" r="5" fill="var(--accent)"/><circle cx="280" cy="15" r="5" fill="var(--accent)"/><circle cx="370" cy="15" r="5" fill="var(--accent)"/><text x="38" y="13" font-size="9" fill="currentColor">Futian</text><text x="135" y="11" font-size="9" fill="currentColor">GZ South</text><text x="245" y="11" font-size="9" fill="currentColor">Shamian Is.</text><text x="320" y="11" font-size="9" fill="currentColor">Shangxiajiu</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>05:43 广州</strong> → 🌇 <strong>19:13</strong> · 🌡 <strong>28°C</strong> → <strong>33°C</strong> · ☔ 50% PM · 💧 82% · ☀ UV 9 extreme · 🌬 8 km/h</div><div class="weather-advice">👕 Light cotton; comfortable walking shoes</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Shamian Island 沙面 banyan-lined streets, late afternoon ~17:30 — backlit Beaux-Arts facades + low Pearl River sun. Bring 35mm equivalent.</div>
 
 <div class="blocks">
@@ -978,6 +1008,7 @@ One day per page (A4). Each day shows 4 four-hour time blocks (06–10, 10–14,
 <div class="stats"><span>🌤 28–32°C → 39°C RUH</span><span>⛰ sea level</span><span>Region: PRD → home</span></div>
 </div>
 <div class="minimap"><svg viewBox="0 0 400 30"><line x1="20" y1="15" x2="380" y2="15" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/><circle cx="20" cy="15" r="5" fill="var(--accent)"/><circle cx="120" cy="15" r="5" fill="var(--accent)"/><circle cx="380" cy="15" r="5" fill="var(--accent)"/><text x="28" y="13" font-size="9" fill="currentColor">Shamian</text><text x="90" y="11" font-size="9" fill="currentColor">CAN 12:30</text><text x="340" y="11" font-size="9" fill="currentColor">RUH 19:40</text></svg></div>
+<div class="weather"><div class="weather-line">🌅 <strong>05:43→cabin</strong> → 🌇 <strong>19:13→RUH</strong> · 🌡 <strong>28°C→41</strong> → <strong>33°C→cabin</strong> · ☔ 30% · 💧 78%→15% · ☀ UV 9→9 · 🌬 calm</div><div class="weather-advice">👕 Travel-comfy; expect Riyadh heat on arrival</div></div>
 <div style="font-size:11px;color:var(--muted);margin:0 0 8px;padding:4px 8px;background:var(--soft);border-left:3px solid var(--accent);border-radius:0 3px 3px 0">📷 <strong>Best shot today:</strong> Final morning at Shamian ~07:00 — quiet streets before tourists, golden light on colonial buildings. Last memory shot.</div>
 
 <div class="blocks">
