@@ -145,10 +145,102 @@ p{margin:0 0 6px}
   .audio-btn{padding:8px 10px !important;min-width:42px;min-height:42px}
 }
 .audio-btn{background:none;border:none;cursor:pointer;padding:0 4px;font-size:inherit;color:var(--accent);transition:transform .1s;font-family:inherit;line-height:1}.audio-btn:hover{transform:scale(1.2)}.audio-btn:active{transform:scale(.95)}
+
+/* ============ NAVIGATION ENHANCEMENTS ============ */
+/* Top progress bar — fills as you scroll */
+#progress-bar{
+  position:fixed;top:0;left:0;height:3px;width:0;z-index:9999;
+  background:linear-gradient(90deg,var(--guangxi) 0%,var(--yunnan) 33%,var(--tibetan) 60%,var(--prd) 78%,var(--prd) 100%);
+  transition:width .08s linear;
+  box-shadow:0 0 4px rgba(0,0,0,.15);
+}
+:root[data-theme="dark"] #progress-bar{box-shadow:0 0 6px rgba(255,255,255,.2)}
+
+/* Jump-to-section overlay */
+#jump-nav{
+  position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9998;
+  display:none;align-items:center;justify-content:center;padding:20px;
+  -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+}
+#jump-nav.open{display:flex}
+#jump-nav-panel{
+  background:var(--card);color:var(--ink);
+  width:100%;max-width:480px;max-height:82vh;overflow-y:auto;
+  border-radius:12px;padding:18px 16px;
+  box-shadow:0 8px 30px rgba(0,0,0,.4);
+}
+#jump-nav h3{
+  margin:14px 0 6px;font-size:11px;color:var(--muted);
+  text-transform:uppercase;letter-spacing:1px;font-weight:600;
+}
+#jump-nav h3:first-child{margin-top:0}
+#jump-nav-panel .jump-close{
+  position:sticky;top:-18px;float:right;margin:-8px -8px 0 0;
+  background:var(--soft);border:1px solid var(--rule);color:var(--ink);
+  width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;
+  display:flex;align-items:center;justify-content:center;
+}
+#jump-nav-panel .jump-title{
+  font-size:16px;font-weight:600;margin:0 0 12px;padding-right:40px;
+}
+button.jump-item{
+  display:flex;align-items:center;gap:8px;width:100%;text-align:left;
+  padding:9px 11px;margin-bottom:3px;background:var(--bg);
+  border:1px solid var(--rule);border-radius:6px;cursor:pointer;
+  font:inherit;font-size:13px;color:var(--ink);line-height:1.35;
+  transition:background .1s;
+}
+button.jump-item:hover,button.jump-item:focus{background:var(--soft);outline:none}
+button.jump-item:active{transform:scale(.99)}
+button.jump-item .region-dot{
+  width:8px;height:8px;border-radius:2px;flex-shrink:0;
+}
+button.jump-item .item-num{
+  font-weight:600;color:var(--muted);min-width:48px;font-size:11px;letter-spacing:.5px;
+}
+button.jump-item .item-text{flex:1;min-width:0}
+
+/* Back-to-top FAB */
+#back-to-top{
+  position:fixed;bottom:20px;right:20px;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--accent);color:#fff;border:none;font-size:20px;
+  cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);
+  z-index:1000;opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .15s;
+  display:flex;align-items:center;justify-content:center;
+}
+#back-to-top.visible{opacity:.92;pointer-events:auto}
+#back-to-top:hover{opacity:1;transform:translateY(-1px)}
+#back-to-top:active{transform:scale(.94)}
+
+/* Hide nav UI when printing */
+@media print{
+  #progress-bar,#jump-nav,#back-to-top{display:none !important}
+}
+
+/* Mobile: slightly smaller FAB, panel uses full width */
+@media (max-width:768px){
+  #back-to-top{bottom:14px;right:14px;width:44px;height:44px;font-size:18px}
+  #jump-nav{padding:14px}
+  #jump-nav-panel{padding:14px 12px;max-height:88vh}
+  button.jump-item{padding:10px 11px;font-size:13.5px}
+  button.jump-item .item-num{min-width:54px;font-size:11.5px}
+}
 </style>
 </head>
 <body>
+<div id="progress-bar" aria-hidden="true"></div>
+<div id="jump-nav" role="dialog" aria-label="Section navigation">
+  <div id="jump-nav-panel" role="document">
+    <button class="jump-close" aria-label="Close" onclick="closeJumpNav()">×</button>
+    <div class="jump-title">Jump to section</div>
+    <div id="jump-nav-content"></div>
+  </div>
+</div>
+<button id="back-to-top" aria-label="Back to top" onclick="scrollToTop()">↑</button>
 <div class="controls">
+<button id="jumpBtn" onclick="openJumpNav()" aria-label="Jump to section">📑 Sections</button>
 <button id="darkBtn">🌙 Dark</button>
 <button onclick="window.print()">🖨 Print</button>
 </div>
@@ -1708,6 +1800,123 @@ function playAudio(src){
 function playZh(text){
   window.open('https://translate.google.com/?sl=zh-CN&tl=en&text='+encodeURIComponent(text)+'&op=translate','_blank');
 }
+
+// ============ NAVIGATION ENHANCEMENTS ============
+(function(){
+  // --- Progress bar ---
+  var bar = document.getElementById('progress-bar');
+  var btt = document.getElementById('back-to-top');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    if(bar) bar.style.width = pct + '%';
+    if(btt){
+      if(h.scrollTop > 300) btt.classList.add('visible');
+      else btt.classList.remove('visible');
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  // --- Build jump nav menu dynamically ---
+  function buildJumpNav(){
+    var container = document.getElementById('jump-nav-content');
+    if(!container) return;
+    var html = '';
+    // Cover
+    var cover = document.querySelector('.cover');
+    if(cover){
+      cover.id = 'sec-cover';
+      html += '<h3>Overview</h3>';
+      html += '<button class="jump-item" data-target="sec-cover">' +
+              '<span class="item-num">Cover</span>' +
+              '<span class="item-text">Trip overview + stats</span></button>';
+    }
+    // Day sections
+    html += '<h3>Daily plan (19 days)</h3>';
+    var dayCount = 0;
+    document.querySelectorAll('section.page').forEach(function(s){
+      var dateEl = s.querySelector('.day-head .date');
+      var placeEl = s.querySelector('.day-head .place');
+      if(!dateEl) return;
+      var dateText = dateEl.textContent.trim();
+      var placeText = placeEl ? placeEl.textContent.trim() : '';
+      var m = dateText.match(/Day\s+(\d+)/);
+      if(!m) return;
+      var n = m[1];
+      var id = 'day-' + n;
+      s.id = id;
+      var region = s.getAttribute('data-region') || 'prd';
+      var dateOnly = dateText.replace(/Day\s+\d+\s*·\s*/, '');
+      html += '<button class="jump-item" data-target="' + id + '">' +
+              '<span class="region-dot" style="background:var(--' + region + ')"></span>' +
+              '<span class="item-num">Day ' + n + '</span>' +
+              '<span class="item-text"><strong>' + dateOnly + '</strong> · ' + placeText + '</span>' +
+              '</button>';
+      dayCount++;
+    });
+    // Appendices
+    var appendices = [];
+    document.querySelectorAll('section.appendix h2').forEach(function(h){
+      var t = h.textContent.trim();
+      var m = t.match(/Appendix\s+([A-Z])(?:\s+·\s+(.+?))?(?:\s*\(continued\))?$/);
+      if(m){
+        var section = h.closest('section');
+        var id = 'app-' + m[1];
+        if(!section.id) section.id = id;
+        appendices.push({letter: m[1], title: m[2] || '', id: section.id});
+      }
+    });
+    if(appendices.length){
+      html += '<h3>Appendices</h3>';
+      appendices.forEach(function(a){
+        html += '<button class="jump-item" data-target="' + a.id + '">' +
+                '<span class="item-num">App ' + a.letter + '</span>' +
+                '<span class="item-text">' + a.title + '</span>' +
+                '</button>';
+      });
+    }
+    container.innerHTML = html;
+    // Wire up clicks
+    container.querySelectorAll('.jump-item').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.getAttribute('data-target');
+        var el = document.getElementById(id);
+        if(el){
+          closeJumpNav();
+          setTimeout(function(){
+            el.scrollIntoView({behavior:'smooth', block:'start'});
+          }, 80);
+        }
+      });
+    });
+  }
+  buildJumpNav();
+})();
+
+// --- Jump nav open/close (window-scope so buttons can call) ---
+function openJumpNav(){
+  document.getElementById('jump-nav').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeJumpNav(){
+  document.getElementById('jump-nav').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function scrollToTop(){
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+// Click outside panel to close
+document.getElementById('jump-nav').addEventListener('click', function(e){
+  if(e.target.id === 'jump-nav') closeJumpNav();
+});
+// Escape to close
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeJumpNav();
+});
+
 </script>
 </body>
 </html>
